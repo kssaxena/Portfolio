@@ -7,14 +7,25 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
     <nav className="mb-10 flex justify-between items-center py-3">
-      <div className="flex flex-shrink-0 items-center">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1 }}
+        className="flex flex-shrink-0 items-center"
+      >
         <img src={Mr_saxena_logo} alt="logo" className="rounded-full w-[6vw]" />
-      </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      </motion.div>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1 }}
+        className="m-8 flex items-center justify-center gap-4 text-2xl"
+      >
         <Link
           to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
           className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
@@ -45,7 +56,7 @@ const Navbar = () => {
         >
           <BiLogoGmail className="text-2xl text-red-500" />
         </Link>
-      </div>
+      </motion.div>
     </nav>
   );
 };

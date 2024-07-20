@@ -27,18 +27,22 @@ const Contact = () => {
     });
   };
 
+  const isFormFilled = () => {
+    return form.name !== "" && form.email !== "";
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     emailjs
       .send(
-        "service_rphsoxk",
-        "template_c6gap7f",
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
         {
           from_name: form.name,
           from_message: form.message,
         },
-        "TrBKmQa7dqCHu0-8M"
+        process.env.PUBLIC_KEY
       )
       .then(
         () => {
@@ -129,6 +133,7 @@ const Contact = () => {
             onChange={handleChange}
           />
           <button
+            disabled={!isFormFilled()}
             type="submit"
             onClick={handleSubmit}
             className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-fit px-5 m-1"

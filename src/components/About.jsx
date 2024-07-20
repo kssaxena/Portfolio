@@ -18,7 +18,10 @@ const About = () => {
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
-        About <span className="text-neutral-500">Me</span>
+        About{" "}
+        <span className="text-neutral-500 bg-gradient-to-r from-pink-300 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
+          Me
+        </span>
       </motion.h2>
       <div className="flex flex-wrap justify-center items-center">
         <motion.div

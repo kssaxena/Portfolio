@@ -1,5 +1,6 @@
 import { HERO_CONTENT } from "../AllConstants/AllConstants";
 import HeroPhoto from "../assets/HeroPhoto.jpg";
+import HeroPhoto2 from "../assets/HeroPhoto2.jpg";
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -49,9 +50,9 @@ const Hero = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              src={HeroPhoto}
+              src={HeroPhoto2}
               alt="logo"
-              className="w-1/2"
+              className="w-3/4 rounded-2xl"
             />
           </div>
         </div>

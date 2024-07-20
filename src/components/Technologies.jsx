@@ -26,9 +26,11 @@ const Technologies = () => {
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1.5 }}
         // onHoverEnd={{}}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center "
       >
-        Technologies
+        <h1 className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-4xl tracking-tight text-transparent">
+          Technologies
+        </h1>
       </motion.h1>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
