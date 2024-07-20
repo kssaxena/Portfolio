@@ -6,6 +6,8 @@ import AriserTradco from "../assets/AriserTradco.png";
 import ArtSchool from "../assets/ArtSchool.png";
 import NotesApp from "../assets/NotesApp.png";
 import LiveChat from "../assets/LiveChat.png";
+import EmpowerED from "../assets/EmpowerED.png";
+import {motion} from "framer-motion"
 
 const Projects = () => {
   const Skeleton = ({ photo }) => (
@@ -43,7 +45,7 @@ const Projects = () => {
       icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
     },
     {
-      // header: <Skeleton photo={ProjectImageDemo} />,
+      header: <Skeleton photo={EmpowerED} />,
       title: "EmpowerED",
       description:
         "This is a platform for Educators and Learners to come together. This platform provides features like Live Video conference, Live White Board , AI assistance and File sharing. ",
@@ -78,21 +80,28 @@ const Projects = () => {
 
   return (
     <div className="border-b border-neutral-900 pb-4">
-      <h1 className="my-20 text-center text-4xl">Projects</h1>
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="my-20 text-center text-4xl"
+      >
+        Projects
+      </motion.h1>
       <div className="">
         <BentoGrid className="max-w-5xl mx-auto">
-        {PROJECTS.map((item, i) => (
-          <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          icon={item.icon}
-          technology={item.technologies}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-          />
+          {PROJECTS.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              technology={item.technologies}
+              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            />
           ))}
-          </BentoGrid>
+        </BentoGrid>
       </div>
     </div>
   );

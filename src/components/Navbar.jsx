@@ -1,18 +1,50 @@
 import React from "react";
 import Mr_saxena_logo from "../assets/Mr_saxena_logo.png";
-import { Linkedin, Facebook, Instagram, Github } from "lucide-react";
+// import { Linkedin, Facebook, Instagram, Github } from "lucide-react";
+import { FiInstagram } from "react-icons/fi";
+import { FaFacebookF } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="mb-20 flex justify-between items-center py-3">
+    <nav className="mb-10 flex justify-between items-center py-3">
       <div className="flex flex-shrink-0 items-center">
         <img src={Mr_saxena_logo} alt="logo" className="rounded-full w-[6vw]" />
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-        <Linkedin/>
-        <Facebook/>
-        <Instagram/>
-        <Github/>
+        <Link
+          to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
+          className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <FiInstagram className="text-2xl text-red-500" />
+        </Link>
+        <Link
+          to={`https://www.facebook.com/profile.php?id=100006677474839&mibextid=ZbWKwL`}
+          className="rounded-2xl p-2 hover:-translate-x-2 duration-300 ease-in-out"
+        >
+          <FaFacebookF className="text-2xl text-cyan-500" />
+        </Link>
+        <Link
+          to={`https://github.com/kssaxena`}
+          className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <FaGithub className="text-2xl text-white" />
+        </Link>
+        <Link
+          to={`https://www.linkedin.com/in/kshitij-saxena-16baa5261/`}
+          className="rounded-2xl p-2 hover:translate-x-2 duration-300 ease-in-out"
+        >
+          <FaLinkedinIn className="text-2xl text-blue-500" />
+        </Link>
+        <Link
+          to={`kshitijsaxena9@gmail.com`}
+          className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <BiLogoGmail className="text-2xl text-red-500" />
+        </Link>
       </div>
     </nav>
   );

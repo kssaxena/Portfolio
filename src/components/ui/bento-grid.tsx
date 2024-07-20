@@ -1,5 +1,6 @@
 // import { cn } from "@/lib/utils";
 import { cn } from "../utils/cn";
+import {motion} from "framer-motion"
 
 export const BentoGrid = ({
   className,
@@ -36,7 +37,10 @@ export const BentoGridItem = ({
   technology?: string | React.ReactNode;
 }) => {
   return (
-    <div
+    <motion.div
+      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: -100 }}
+      transition={{ duration: 0.1 }}
       className={cn(
         "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 backdrop-blur-xl dark:bg-neutral-800 dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
         className
@@ -55,6 +59,6 @@ export const BentoGridItem = ({
           {technology}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -7,3 +7,30 @@
 :root {
   font-family: "Inter", sans-serif;
 }
+
+
+* {
+  scroll-behavior: smooth
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+    padding: 1px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #18181B;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1D2739;
+    border-radius: 1px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1D2739;
+}
