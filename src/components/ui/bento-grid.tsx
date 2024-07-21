@@ -1,6 +1,6 @@
 // import { cn } from "@/lib/utils";
 import { cn } from "../utils/cn";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 export const BentoGrid = ({
   className,
@@ -47,10 +47,12 @@ export const BentoGridItem = ({
       )}
     >
       {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
+      <div className="group-hover/bento:translate-x-2 transition duration-200 ">
         {icon}
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-          {title}
+        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 ">
+          <h1 className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text tracking-tight text-transparent">
+            {title}
+          </h1>
         </div>
         <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
           {description}

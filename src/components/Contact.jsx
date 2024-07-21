@@ -11,7 +11,7 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: "",
+    email: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   const isFormFilled = () => {
-    return form.name !== "" && form.email !== "";
+    return form.message !== "" && form.email !== "";
   };
 
   const handleSubmit = (e) => {
@@ -39,7 +39,7 @@ const Contact = () => {
         process.env.SERVICE_ID,
         process.env.TEMPLATE_ID,
         {
-          from_name: form.name,
+          from_email: form.email,
           from_message: form.message,
         },
         process.env.PUBLIC_KEY
@@ -48,7 +48,7 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Email sent successfully!");
-          setForm({ name: "", message: "" });
+          setForm({ email: "", message: "" });
         },
         (error) => {
           setLoading(false);
@@ -116,11 +116,11 @@ const Contact = () => {
           <h1>Text for frequent response..</h1>
           <input
             className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-full m-1"
-            placeholder="Name"
-            type="name"
+            placeholder="Enter your Email address"
+            type="email"
             required={true}
-            name="name"
-            value={form.name}
+            name="email"
+            value={form.email}
             onChange={handleChange}
           />
           <textarea

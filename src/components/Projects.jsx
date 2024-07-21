@@ -7,7 +7,8 @@ import ArtSchool from "../assets/ArtSchool.png";
 import NotesApp from "../assets/NotesApp.png";
 import LiveChat from "../assets/LiveChat.png";
 import EmpowerED from "../assets/EmpowerED.png";
-import {motion} from "framer-motion"
+import WoodzzzCraft from "../assets/WoodzzzCraft.png";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const Skeleton = ({ photo }) => (
@@ -21,11 +22,12 @@ const Projects = () => {
 
   const PROJECTS = [
     {
+      header: <Skeleton photo={WoodzzzCraft} />,
       title: "WOODZZZ CRAFT",
       description:
         "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
       technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4  text-blue-500" />,
     },
     {
       title: "Ariser Tradco",
@@ -34,7 +36,7 @@ const Projects = () => {
         "An application for Showcasing Retail Products as well as displaying it with an Interactive UI.",
       technologies:
         "HTML, CSS, Vue.js, Jsx, TypeScript, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
     },
     {
       header: <Skeleton photo={ProjectImageDemo} />,
@@ -42,7 +44,7 @@ const Projects = () => {
       description:
         "A personal portfolio website showcasing projects, skills, and contact information.",
       technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
     },
     {
       header: <Skeleton photo={EmpowerED} />,
@@ -50,7 +52,7 @@ const Projects = () => {
       description:
         "This is a platform for Educators and Learners to come together. This platform provides features like Live Video conference, Live White Board , AI assistance and File sharing. ",
       technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
     },
     {
       header: <Skeleton photo={ArtSchool} />,
@@ -58,7 +60,7 @@ const Projects = () => {
       description:
         "A platform for creative persons to create their own creative ideas, this is an Organization who trains the best creativity out of the world.",
       technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
     },
     {
       header: <Skeleton photo={NotesApp} />,
@@ -66,7 +68,7 @@ const Projects = () => {
       description:
         "A platform for users to create notes for there daily list or to store there information",
       technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4 text-blue-500" />,
     },
     {
       header: <Skeleton photo={LiveChat} />,
@@ -74,7 +76,7 @@ const Projects = () => {
       description:
         "A platform for users to visit new people around online, this platform provides Live interaction between strangers to come together.",
       technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-      icon: <FaGithub className="h-4 w-4 text-neutral-500" />,
+      icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
     },
   ];
 

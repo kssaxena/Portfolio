@@ -5,8 +5,12 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import { motion, useScroll, useSpring } from "framer-motion";
+// import ("dotenv").config();
+// import dotenv from "dotenv";
 // import './App.css'
+// dotenv.config({ path: "../.env" });
 
+// dotenv.config();
 function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -14,6 +18,8 @@ function App() {
     damping: 30,
     restDelta: 0.001,
   });
+
+  console.log(process.env.PUBLIC_KEY);
 
   return (
     <>
