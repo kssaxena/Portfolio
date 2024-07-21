@@ -68,7 +68,7 @@ const Contact = () => {
       >
         Contact
       </motion.h2>
-      <section className="flex w-full justify-evenly items-center">
+      <section className="flex w-full justify-evenly items-center ">
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
@@ -111,7 +111,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: 200 }}
           transition={{ duration: 1.5 }}
           ref={formRef}
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col justify-center items-center flex-wrap gap-7"
         >
           <h1>Text for frequent response..</h1>
           <input
