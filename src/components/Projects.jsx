@@ -8,6 +8,9 @@ import NotesApp from "../assets/NotesApp.png";
 import LiveChat from "../assets/LiveChat.png";
 import EmpowerED from "../assets/EmpowerED.png";
 import WoodzzzCraft from "../assets/WoodzzzCraft.png";
+import EvalEngine from "../assets/EvalEngine.png";
+import HealthTap from "../assets/HealthTap.png";
+import NovaAIModel from "../assets/NovaAIModel.png";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -21,6 +24,30 @@ const Projects = () => {
   );
 
   const PROJECTS = [
+    {
+      header: <Skeleton photo={EvalEngine} />,
+      title: "Eval Engine",
+      description:
+        "Eval Engine is a comprehensive solution designed to streamline the process of evaluating and managing student projects, ensuring fairness and efficiency in the grading process. This project management system is built with a focus on user-friendliness, scalability, and customization to meet the diverse needs of educators and institutions.",
+      technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
+      icon: <FaGithub className="h-4 w-4  text-blue-500" />,
+    },
+    {
+      header: <Skeleton photo={NovaAIModel} />,
+      title: "Nova -AI Model",
+      description:
+        "Nova is an advanced AI model designed to streamline the process of generating test results for text-based assessments. This cutting-edge technology leverages natural language processing (NLP) and machine learning algorithms to analyze and interpret written responses, ensuring accurate and efficient results.",
+      technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
+      icon: <FaGithub className="h-4 w-4  text-blue-500" />,
+    },
+    {
+      header: <Skeleton photo={HealthTap} />,
+      title: "Health Tap",
+      description:
+        "HealthTap is an innovative online health consultation application designed to provide personalized, accessible, and convenient healthcare services to individuals and families. This cutting-edge technology aims to bridge the gap between traditional healthcare providers and patients, offering a seamless and efficient solution to healthcare needs.",
+      technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
+      icon: <FaGithub className="h-4 w-4  text-blue-500" />,
+    },
     {
       header: <Skeleton photo={WoodzzzCraft} />,
       title: "WOODZZZ CRAFT",
