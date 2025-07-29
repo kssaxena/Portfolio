@@ -111,7 +111,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: 200 }}
           transition={{ duration: 1.5 }}
           ref={formRef}
-          className="flex flex-col justify-center items-center flex-wrap gap-7 hidden lg:block"
+          className="lg:flex flex-col justify-center items-center flex-wrap gap-7 hidden"
         >
           <h1>Text for frequent response..</h1>
           <input
