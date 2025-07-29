@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,29 +15,28 @@
   font-style: normal;
 }
 
-
 * {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 2px;
-    padding: 1px;
+  width: 2px;
+  padding: 1px;
 }
- 
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #18181B;
+  background: #18181b;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #1D2739;
-    border-radius: 1px;
+  background: #1d2739;
+  border-radius: 1px;
 }
- 
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #1D2739;
+  background: #1d2739;
 }
