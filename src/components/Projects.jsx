@@ -1,16 +1,6 @@
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+// import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
-import ProjectImageDemo from "../assets/ProjectImageDemo.png";
-import AriserTradco from "../assets/AriserTradco.png";
-import ArtSchool from "../assets/ArtSchool.png";
-import NotesApp from "../assets/NotesApp.png";
-import LiveChat from "../assets/LiveChat.png";
-import EmpowerED from "../assets/EmpowerED.png";
-import WoodzzzCraft from "../assets/WoodzzzCraft.png";
-import EvalEngine from "../assets/EvalEngine.png";
-import HealthTap from "../assets/HealthTap.png";
-import NovaAIModel from "../assets/NovaAIModel.png";
 import { motion } from "framer-motion";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 

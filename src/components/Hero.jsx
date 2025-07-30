@@ -1,6 +1,6 @@
 import { HERO_CONTENT } from "../AllConstants/AllConstants";
-import HeroPhoto from "../assets/HeroPhoto.jpg";
-import HeroPhoto2 from "../assets/HeroPhoto2.jpg";
+// import HeroPhoto from "../assets/HeroPhoto.jpg";
+// import HeroPhoto2 from "../assets/HeroPhoto2.jpg";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
@@ -53,7 +53,7 @@ const Hero = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              src={HeroPhoto2}
+              src={`https://ik.imagekit.io/jarvisai/My_Portfolio/HeroPhoto2.jpg?updatedAt=1753893552768`}
               alt="logo"
               className="w-3/4 rounded-2xl"
             />

@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <motion.div
-        className="progress-bar bg-gradient-to-r from-rose-400 to-red-500 p-[1px] fixed left-0 w-full z-50"
+        className="progress-bar bg-gradient-to-r from-red-500 to-red-900 p-[1px] fixed left-0 w-full z-50"
         style={{ scaleX }}
       />
       <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-500 selection:text-cyan-900 font-montserrat">

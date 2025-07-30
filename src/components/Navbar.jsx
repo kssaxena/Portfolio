@@ -1,5 +1,5 @@
 import React from "react";
-import Mr_saxena_logo from "../assets/Mr_saxena_logo.png";
+// import Mr_saxena_logo from "../assets/Mr_saxena_logo.png";
 // import { Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa";
@@ -18,7 +18,11 @@ const Navbar = () => {
         transition={{ duration: 1 }}
         className="flex flex-shrink-0 items-center"
       >
-        <img src={Mr_saxena_logo} alt="logo" className="rounded-full w-[6vw]" />
+        <img
+          src={`https://ik.imagekit.io/jarvisai/My_Portfolio/Mr_saxena_logo.png?updatedAt=1753893555054`}
+          alt="logo"
+          className="rounded-full w-[6vw]"
+        />
       </motion.div>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
