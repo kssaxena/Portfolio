@@ -65,7 +65,7 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="my-20 text-center"
       >
-        <h1 className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-4xl tracking-tight text-transparent">
+        <h1 className="bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-4xl text-transparent w-fit font-agile uppercase tracking-widest">
           Technologies
         </h1>
       </motion.h1>
@@ -90,20 +90,20 @@ const Technologies = () => {
               <>
                 {/* Rotating Shape */}
                 <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-blue-500"
+                  className="absolute inset-0 rounded-full border-2 border-red-500"
                   animate={{
                     rotate: [0, 360],
                   }}
                   transition={{
                     duration: 2,
-                    ease: "linear",
+                    ease: "easeInOut",
                     repeat: Infinity,
                   }}
                 ></motion.div>
 
                 {/* Glowing Effect */}
                 <motion.div
-                  className="absolute inset-0 rounded-full bg-cyan-500 opacity-20 blur-xl"
+                  className="absolute inset-0 rounded-full bg-red-500 opacity-20 blur-xl"
                   animate={{
                     scale: [1, 1.5],
                     opacity: [0.2, 0.4, 0.2],
@@ -116,7 +116,7 @@ const Technologies = () => {
                 ></motion.div>
 
                 {/* Tooltip */}
-                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-800  px-5 py-2 text-lg rounded-2xl text-white shadow-lg font-Childish duration-300">
+                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-800  px-5 py-2 text-lg rounded-2xl text-white shadow-lg duration-300 ease-in-out">
                   {icon.name}
                 </div>
               </>

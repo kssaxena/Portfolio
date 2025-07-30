@@ -16,12 +16,12 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20 text-center text-4xl font-agile bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent w-fit uppercase tracking-widest"
       >
-        About{" "}
-        <span className="text-neutral-500 bg-gradient-to-r from-pink-300 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
+        About Me
+        {/* <span className="text-neutral-500 bg-gradient-to-r from-pink-300 to-purple-500  text-4xl tracking-tight ">
           Me
-        </span>
+        </span> */}
       </motion.h2>
       <div className="flex flex-wrap justify-center items-center">
         <motion.div
@@ -45,13 +45,13 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-center">
-            <p className="my-2 max-w-xl py-6 font-sans font-light">{ABOUT_TEXT}</p>
+            <p className="my-2 max-w-xl py-6 font-sans font-light">
+              {ABOUT_TEXT}
+            </p>
           </div>
         </motion.div>
       </div>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 };

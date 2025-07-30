@@ -1,9 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* @import "./fonts.css"; */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Blanka";
+  src: url("/fonts/Blanka-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Agile";
+  src: url("/fonts/agile.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-agile {
+  font-family: "Agile", sans-serif;
+}
+.font-blanka {
+  font-family: "Blanka", sans-serif;
+}
+.font-montserrat {
+  font-family: "Montserrat", cursive;
+}
 
 :root {
   font-family: "Inter", sans-serif;
@@ -40,3 +67,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #1d2739;
 }
+.no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
