@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "../lib/utils";
-import { TracingBeam } from "./tracing-beam";
 
 export const StickyScroll = ({ content, contentClassName }) => {
   const [activeCard, setActiveCard] = React.useState(0);
@@ -66,7 +65,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-2xl p-10 items-start no-scrollbar inset-shadow-sm shadow-black select-none"
+      className="relative flex h-[30rem] justify-center space-x-32 overflow-y-auto rounded-2xl p-10 items-start no-scrollbar inset-shadow-sm shadow-black select-none"
       ref={ref}
     >
       <div className="div relative flex items-start px-4 w-1/2 justify-center ">

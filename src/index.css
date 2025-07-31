@@ -22,11 +22,31 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamOne";
+  src: url("/fonts/Amsterdam-One.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RollerScript";
+  src: url("/fonts/Rollerscript-Rough.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .font-agile {
   font-family: "Agile", sans-serif;
 }
 .font-blanka {
   font-family: "Blanka", sans-serif;
+}
+.font-amsterdam {
+  font-family: "AmsterdamOne", sans-serif;
+}
+.font-roller {
+  font-family: "RollerScript", sans-serif;
 }
 .font-montserrat {
   font-family: "Montserrat", cursive;
@@ -68,5 +88,5 @@
   background: #1d2739;
 }
 .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
+  display: none;
+}

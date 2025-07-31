@@ -59,63 +59,33 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-b border-neutral-900 pb-20">
+    <div className="border-b border-neutral-900 pb-20 flex flex-col items-center justify-center gap-10">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="my-10 text-center text-4xl"
+        className="my-10 text-center font-agile w-fit bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-4xl text-transparent uppercase tracking-widest"
       >
         Contact
       </motion.h2>
-      <section className="flex w-full justify-evenly items-center ">
-        <motion.div
+      <section className="flex w-full justify-between items-center gap-5">
+        <motion.img
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 1.5 }}
-          className="flex flex-wrap items-center justify-center gap-7"
-        >
-          <Link
-            to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
-            className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
-          >
-            <FiInstagram className="text-2xl text-red-500" />
-          </Link>
-          <Link
-            to={`https://www.facebook.com/profile.php?id=100006677474839&mibextid=ZbWKwL`}
-            className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
-          >
-            <FaFacebookF className="text-2xl text-cyan-500" />
-          </Link>
-          <Link
-            to={`https://github.com/kssaxena`}
-            className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
-          >
-            <FaGithub className="text-2xl text-white" />
-          </Link>
-          <Link
-            to={`https://www.linkedin.com/in/kshitij-saxena-16baa5261/`}
-            className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
-          >
-            <FaLinkedinIn className="text-2xl text-blue-500" />
-          </Link>
-          <Link
-            to={`kshitijsaxena9@gmail.com`}
-            className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
-          >
-            <BiLogoGmail className="text-2xl text-red-500" />
-          </Link>
-        </motion.div>
+          transition={{ duration: 1 }}
+          src={`https://ik.imagekit.io/jarvisai/My_Portfolio/code.jpeg?updatedAt=1753988850496`}
+          className="w-3/4 rounded-2xl"
+        />
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 200 }}
           transition={{ duration: 1.5 }}
           ref={formRef}
-          className="lg:flex flex-col justify-center items-center flex-wrap gap-7 hidden"
+          className="lg:flex flex-col justify-center items-center flex-wrap gap-7 hidden w-full "
         >
           <h1>Text for frequent response..</h1>
           <input
-            className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-full m-1"
+            className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-full"
             placeholder="Enter your Email address"
             type="email"
             required={true}
@@ -124,7 +94,7 @@ const Contact = () => {
             onChange={handleChange}
           />
           <textarea
-            className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-full m-1"
+            className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-full h-96"
             placeholder="Drop your query as well as your Contact Details.. "
             type="text"
             required={true}
@@ -136,14 +106,77 @@ const Contact = () => {
             disabled={!isFormFilled()}
             type="submit"
             onClick={handleSubmit}
-            className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-fit px-5 m-1"
+            className="bg-transparent border-neutral-900 border-4 rounded-2xl text-center p-2 flex justify-center items-center text-white w-fit px-5"
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </motion.div>
       </section>
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-wrap items-center justify-center gap-7"
+      >
+        <Link
+          to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
+          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <FiInstagram className="text-2xl text-red-500" />
+        </Link>
+        <Link
+          to={`https://www.facebook.com/profile.php?id=100006677474839&mibextid=ZbWKwL`}
+          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <FaFacebookF className="text-2xl text-cyan-500" />
+        </Link>
+        <Link
+          to={`https://github.com/kssaxena`}
+          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <FaGithub className="text-2xl text-white" />
+        </Link>
+        <Link
+          to={`https://www.linkedin.com/in/kshitij-saxena-16baa5261/`}
+          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <FaLinkedinIn className="text-2xl text-blue-500" />
+        </Link>
+        <Link
+          to={`kshitijsaxena9@gmail.com`}
+          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        >
+          <BiLogoGmail className="text-2xl text-red-500" />
+        </Link>
+      </motion.div>
     </div>
   );
 };
 
 export default Contact;
+
+// // 🛑 Warning: This code may cause uncontrollable motivation 🛑
+
+// const getLifeAdvice = () => {
+//   const moods = ["motivated", "chaotic", "sleep-deprived", "legendary", "mildly confused"];
+//   const skills = ["React", "JavaScript", "Node.js", "Googling things like a pro", "Fixing bugs I created myself"];
+//   const punchlines = [
+//     "Hire me now, before I become the CEO of something cool 🚀",
+//     "Debugging is just solving mysteries where you’re the murderer 🔍",
+//     "Code so clean it squeaks ✨",
+//     "If coffee = true, then productivity = infinity ☕",
+//     "Console.log('Dreams into Reality'); 💡"
+//   ];
+
+//   const random = arr => arr[Math.floor(Math.random() * arr.length)];
+
+//   return `Today I'm feeling ${random(moods)}, mastering ${random(skills)}. ${random(punchlines)}`;
+// };
+
+// console.log("👋 Hey there, curious human! Welcome to my portfolio.");
+// console.log("🔥 Pro Tip: Great developers don't just write code... they write stories for computers.");
+// console.log("💡 Here's today's wisdom for you:");
+
+// setInterval(() => console.log(getLifeAdvice()), 4000);
+
+// // Yes, this code is useless. But so was the first Hello World. Now look at us. 🤖

@@ -19,7 +19,7 @@ function App() {
     restDelta: 0.001,
   });
 
-  console.log(process.env.PUBLIC_KEY);
+  // console.log(process.env.PUBLIC_KEY);
 
   return (
     <>
@@ -35,8 +35,8 @@ function App() {
           <Navbar />
           <Hero />
           <About />
-          <Technologies />
           <Projects />
+          <Technologies />
           <Contact />
         </div>
       </div>
