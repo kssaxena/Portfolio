@@ -264,7 +264,7 @@ const About = () => {
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl font-agile bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent w-fit uppercase tracking-widest"
       >
-        About Me
+        About
       </motion.h2>
       <div className="flex flex-wrap justify-center items-center">
         <motion.div
