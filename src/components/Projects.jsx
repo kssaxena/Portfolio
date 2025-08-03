@@ -6,6 +6,7 @@ import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
 const Projects = () => {
   const PROJECTS = [
+    //finora
     {
       title: "Finora Billing",
       description:
@@ -33,6 +34,7 @@ const Projects = () => {
         </div>
       ),
     },
+    //bindni
     {
       title: "Bindni Pvt. Ltd.",
       description:
@@ -60,6 +62,7 @@ const Projects = () => {
         </div>
       ),
     },
+    //ar measure
     {
       title: "A R Measure Pro",
       description:
@@ -87,6 +90,7 @@ const Projects = () => {
         </div>
       ),
     },
+    // multivendor
     {
       title: "Multi-Vendor E-commerce",
       description:
@@ -114,6 +118,7 @@ const Projects = () => {
         </div>
       ),
     },
+    // rider kart
     {
       title: "Rider's Kart",
       description:
@@ -141,6 +146,7 @@ const Projects = () => {
         </div>
       ),
     },
+    //ariser tradco
     {
       title: "Ariser Tradco",
       description:
@@ -168,6 +174,7 @@ const Projects = () => {
         </div>
       ),
     },
+    //woodzzz craft
     {
       title: "WOODZZZ CRAFT",
       description:
@@ -195,7 +202,7 @@ const Projects = () => {
         </div>
       ),
     },
-
+    // creative art school
     {
       title: "Creative School of Arts",
       description:
@@ -223,6 +230,7 @@ const Projects = () => {
         </div>
       ),
     },
+    // eval engine
     {
       title: "Eval Engine",
       description:
@@ -250,6 +258,7 @@ const Projects = () => {
         </div>
       ),
     },
+    // nova
     {
       title: "Nova -AI Model",
       description:
@@ -277,6 +286,7 @@ const Projects = () => {
         </div>
       ),
     },
+    //health tap
     {
       title: "Health Tap",
       description:
@@ -304,6 +314,7 @@ const Projects = () => {
         </div>
       ),
     },
+    // empower ed
     {
       title: "EmpowerED",
       description:
@@ -331,30 +342,6 @@ const Projects = () => {
         </div>
       ),
     },
-    // {
-    //   header: <Skeleton photo={NotesApp} />,
-    //   title: "Notes App",
-    //   description:
-    //     "A platform for users to create notes for there daily list or to store there information",
-    //   technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-    //   icon: <FaGithub className="h-4 w-4 text-blue-500" />,
-    // },
-    // {
-    //   header: <Skeleton photo={LiveChat} />,
-    //   title: "Live Chat",
-    //   description:
-    //     "A platform for users to visit new people around online, this platform provides Live interaction between strangers to come together.",
-    //   technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-    //   icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
-    // },
-    // {
-    //   header: <Skeleton photo={ProjectImageDemo} />,
-    //   title: "Portfolio",
-    //   description:
-    //     "A personal portfolio website showcasing projects, skills, and contact information.",
-    //   technologies: "HTML, CSS, Vue.js, Express, REACT, MONGOdb",
-    //   icon: <FaGithub className="h-4 w-4 text-blue-500 " />,
-    // },
   ];
 
   return (
@@ -363,7 +350,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl font-agile tracking-widest uppercase bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent w-fit text-shadow-lg text-shadow-white"
+        className="lg:my-20 pt-20 text-center text-4xl font-agile tracking-widest uppercase bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent w-fit text-shadow-lg text-shadow-white"
       >
         Projects
       </motion.h1>

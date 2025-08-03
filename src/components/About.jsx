@@ -21,6 +21,7 @@ import {
   Legend,
   RadarController,
 } from "chart.js";
+import { label } from "motion/react-client";
 
 const About = () => {
   Chart.register(
@@ -39,6 +40,44 @@ const About = () => {
     },
   ];
 
+  const dataRadar = {
+    labels: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Express",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+    ],
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: [65, 59, 90, 81, 56, 55, 40],
+        fill: true,
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgb(255, 99, 132)",
+        pointBackgroundColor: "rgb(255, 99, 132)",
+        pointBorderColor: "#fff",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgb(255, 99, 132)",
+        borderWidth: 1,
+      },
+      {
+        label: "My Second Dataset",
+        data: [28, 48, 40, 19, 96, 27, 100],
+        fill: true,
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgb(54, 162, 235)",
+        pointBackgroundColor: "rgb(54, 162, 235)",
+        pointBorderColor: "#fff",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgb(54, 162, 235)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
   const TimeLineData = [
     //education
     {
@@ -47,17 +86,17 @@ const About = () => {
       icon2: <IoSchool />,
       content: (
         <div>
-          <p className="mb-8 font-normal text-neutral-800 dark:text-neutral-400 text-justify indent-8">
+          <p className="mb-8 font-normal text-neutral-800 dark:text-neutral-400 text-justify indent-8 lg:flex hidden">
             My education background includes a recent Bachelor's degree , where
             I graduated with Bachelor's in Computer Science & Technologies.
             During my time there, I developed a strong foundation in Web
             Development, Algorithms, and Data Structures.
           </p>
-          <div className="grid lg:grid-cols-2 gap-4 select-none">
+          <div className="grid lg:grid-cols-2 lg:gap-4 gap-2 select-none">
             <div
               width={500}
               height={500}
-              className="flex justify-center items-end flex-col font-roller text-2xl border p-5 gap-5 rounded-xl"
+              className="flex justify-center items-end flex-col font-roller lg:text-2xl border p-5 gap-5 rounded-xl"
             >
               <h1 className="w-full ">
                 {" "}
@@ -74,18 +113,11 @@ const About = () => {
               width={500}
               height={500}
               className="lg:flex justify-center items-end flex-col font-roller text-2xl  p-5 gap-5 rounded-xl hidden"
-            >
-              {/* <h1>
-                 Bachelor's in Computer Science & Technologies{" "}
-                <br /> from
-              </h1>
-              <p>Usha Martin University</p> */}
-              {/* <p>-Ranchi</p> */}
-            </div>
+            ></div>
             <div
               width={500}
               height={500}
-              className="flex justify-center items-end flex-col font-roller text-2xl border p-5 gap-5 rounded-xl"
+              className="flex justify-center items-end flex-col font-roller lg:text-2xl border p-5 gap-5 rounded-xl"
             >
               <h1 className="w-full ">
                 {" "}
@@ -101,7 +133,7 @@ const About = () => {
             <div
               width={500}
               height={500}
-              className="flex justify-center items-end flex-col font-roller text-2xl border p-5 gap-5 rounded-xl"
+              className="flex justify-center items-end flex-col font-roller lg:text-2xl border p-5 gap-5 rounded-xl"
             >
               <h1 className="w-full ">
                 {" "}
@@ -115,6 +147,7 @@ const About = () => {
         </div>
       ),
     },
+    //skills
     {
       title: "Skills",
       icon: <FaCode />,
@@ -122,7 +155,7 @@ const About = () => {
       icon3: <FaPaintbrush />,
       content: (
         <div>
-          <p className="mb-8 font-normal text-neutral-800 dark:text-neutral-400 text-justify indent-8 text-sm lg:text-base">
+          <p className="lg:block hidden mb-8 font-normal text-neutral-800 dark:text-neutral-400 text-justify indent-8 text-sm lg:text-base">
             I blend my passion for{" "}
             <span className="font-bold lg:text-lg">Painting</span> and{" "}
             <span className="font-bold lg:text-lg">Photography</span> with
@@ -197,6 +230,7 @@ const About = () => {
         </div>
       ),
     },
+    // changelog
     {
       title: "Changelog",
       content: (
@@ -221,35 +255,8 @@ const About = () => {
               ✅ Salman Bhai Fan Club registrations open
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
+          <div className=" h-full text-white">
+            <Radar data={dataRadar} className="  w-1/2" />
           </div>
         </div>
       ),
@@ -262,11 +269,11 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl font-agile bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent w-fit uppercase tracking-widest"
+        className="lg:my-20 my-10 text-center text-4xl font-agile bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent w-fit uppercase tracking-widest"
       >
         About
       </motion.h2>
-      <div className="flex flex-wrap justify-center items-center">
+      <div className="lg:flex flex-wrap justify-center items-center hidden">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
@@ -276,7 +283,7 @@ const About = () => {
           <div className="flex items-center justify-center">
             <img
               src={Image[0].url}
-              className="rounded-xl w-1/2"
+              className="rounded-xl lg:w-1/2"
               alt="about_logo"
             />
           </div>

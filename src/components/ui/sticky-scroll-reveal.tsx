@@ -65,10 +65,10 @@ export const StickyScroll = ({ content, contentClassName }) => {
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-[30rem] justify-center space-x-32 overflow-y-auto rounded-2xl p-10 items-start no-scrollbar inset-shadow-sm shadow-black select-none"
+      className="relative flex h-[30rem] justify-center space-x-32 overflow-y-auto rounded-2xl  items-start no-scrollbar inset-shadow-sm shadow-black select-none"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 w-1/2 justify-center ">
+      <div className="div relative flex lg:flex-row flex-col-reverse items-start lg:px-4 lg:w-1/2 px-2 justify-center ">
         <div className=" w-full">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20 ">
@@ -90,17 +90,17 @@ export const StickyScroll = ({ content, contentClassName }) => {
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 text-slate-300 indent-8 text-justify "
+                className=" mt-10 text-slate-300 lg:indent-8"
               >
                 {item.description}
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          {/* <div className="h-40" /> */}
         </div>
-        <h1 className="bg-red-400 w-fit">
+        {/* <h1 className="w-full fixed top-0 right-0 backdrop-blur-2xl px-4 py-2 text-nowrap text-center rounded-full ">
           {activeCard + 1} / {cardLength}
-        </h1>
+        </h1> */}
       </div>
       <div
         // style={{ background: backgroundGradient }}
@@ -111,7 +111,6 @@ export const StickyScroll = ({ content, contentClassName }) => {
       >
         {content[activeCard].content ?? null}
       </div>
-      {/* <div className="mt-4 text-center text-white text-sm font-medium"></div> */}
     </motion.div>
   );
 };

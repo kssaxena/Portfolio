@@ -55,7 +55,7 @@ const Hero = () => {
               transition={{ duration: 1, delay: 1.2 }}
               src={`https://ik.imagekit.io/jarvisai/My_Portfolio/HeroPhoto2.jpg?updatedAt=1753893552768`}
               alt="logo"
-              className="w-3/4 rounded-2xl"
+              className="lg:w-3/4 rounded-2xl"
             />
           </div>
         </div>
