@@ -12,3 +12,18 @@ export const galleryBannerImages = [
   "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.38.28%E2%80%AFPM.png?updatedAt=1753963919473",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.38.41%E2%80%AFPM.png?updatedAt=1753963919294",
 ];
+
+export const projectUrls = [
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/FinoraBilling.png?updatedAt=1753900509804",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/BindniJewel.png?updatedAt=1753900264396",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/ARMeasurePro.png?updatedAt=1753901663797",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Ecom.png?updatedAt=1753900510220",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/RiderKart.png?updatedAt=1753900510200",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/AriserTradco.png?updatedAt=1753899031163",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Woodzzz-Craft.png?updatedAt=1753898476138",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/ArtSchool.png?updatedAt=1753893553576",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/EvalEngine.png?updatedAt=1753893551657",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/NovaAIModel.png?updatedAt=1753893553047",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/HealthTap.png?updatedAt=1753893552687",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/EmpowerED.png?updatedAt=1753893548129",
+];

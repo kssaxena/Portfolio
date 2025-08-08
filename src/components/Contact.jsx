@@ -64,7 +64,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="my-10 text-center font-agile w-fit bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-4xl text-transparent uppercase tracking-widest"
+        className="my-10 font-agile w-full bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-4xl text-transparent uppercase tracking-widest bg-red-500"
       >
         Contact
       </motion.h2>
