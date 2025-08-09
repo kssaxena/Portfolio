@@ -30,8 +30,8 @@
 }
 
 @font-face {
-  font-family: "RollerScript";
-  src: url("/fonts/Rollerscript-Rough.ttf") format("opentype");
+  font-family: "Palisade";
+  src: url("/fonts/Palisade.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -45,8 +45,8 @@
 .font-amsterdam {
   font-family: "AmsterdamOne", sans-serif;
 }
-.font-roller {
-  font-family: "RollerScript", sans-serif;
+.font-palisade {
+  font-family: "Palisade", sans-serif;
 }
 .font-montserrat {
   font-family: "Montserrat", cursive;

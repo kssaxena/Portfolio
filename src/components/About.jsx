@@ -176,7 +176,7 @@ const About = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               width={500}
               height={500}
-              className="flex justify-center items-end flex-col font-roller lg:text-2xl border p-5 gap-5 rounded-xl"
+              className="flex justify-center items-end flex-col font-palisade lg:text-4xl text-2xl border p-5 gap-5 rounded-xl"
             >
               <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
@@ -203,12 +203,12 @@ const About = () => {
             <div
               width={500}
               height={500}
-              className="lg:flex justify-center items-end flex-col font-roller text-2xl  p-5 gap-5 rounded-xl hidden"
+              className="lg:flex justify-center items-end flex-col font-palisade text-2xl  p-5 gap-5 rounded-xl hidden"
             ></div>
             <div
               width={500}
               height={500}
-              className="flex justify-center items-end flex-col font-roller lg:text-2xl border p-5 gap-5 rounded-xl"
+              className="flex justify-center items-end flex-col font-palisade lg:text-4xl text-2xl border p-5 gap-5 rounded-xl"
             >
               <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ const About = () => {
             <div
               width={500}
               height={500}
-              className="flex justify-center items-end flex-col font-roller lg:text-2xl border p-5 gap-5 rounded-xl"
+              className="flex justify-center items-end flex-col font-palisade lg:text-4xl text-2xl border p-5 gap-5 rounded-xl"
             >
               <motion.h1
                 whileInView={{ opacity: 1, y: 0 }}
