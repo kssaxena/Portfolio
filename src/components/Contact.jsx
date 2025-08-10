@@ -74,7 +74,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
           src={`https://ik.imagekit.io/jarvisai/My_Portfolio/code.jpeg?updatedAt=1753988850496`}
-          className="w-3/4 rounded-2xl"
+          className="w-3/4 rounded-2xl hidden lg:flex"
         />
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}

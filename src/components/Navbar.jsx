@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="mb-10 flex justify-between items-center py-3">
+    <nav className="lg:mb-10 flex lg:justify-between justify-center items-center py-3">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -28,7 +28,7 @@ const Navbar = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1 }}
-        className="m-8 flex items-center justify-center gap-4 text-2xl"
+        className="m-8 flex items-center justify-center gap-4 text-2xl "
       >
         <Link
           to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}

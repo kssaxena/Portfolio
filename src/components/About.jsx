@@ -30,8 +30,46 @@ import {
   SiGit,
   SiHtml5,
 } from "react-icons/si";
+import { IconCloud } from "./ui/icon-cloud";
 
 const About = () => {
+  const slugs = [
+    "typescript",
+    "javascript",
+    "dart",
+    "java",
+    "react",
+    "flutter",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    "prisma",
+    "amazonaws",
+    "postgresql",
+    "firebase",
+    "nginx",
+    "vercel",
+    "testinglibrary",
+    "jest",
+    "cypress",
+    "docker",
+    "git",
+    "jira",
+    "github",
+    "gitlab",
+    "visualstudiocode",
+    "androidstudio",
+    "sonarqube",
+    "figma",
+  ];
+
+  const GlobeImage = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  );
+
   const Image = [
     {
       id: "0",
@@ -329,9 +367,10 @@ const About = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.6 }}
-                className="flex justify-center items-center h-full w-full"
+                className="flex justify-center items-center h-full w-full "
               >
-                <PieChart
+                <IconCloud  images={GlobeImage} />
+                {/* <PieChart
                   series={[
                     {
                       data: pieData,
@@ -342,7 +381,7 @@ const About = () => {
                     },
                   ]}
                   hideLegend={true}
-                />
+                /> */}
               </motion.div>
             </div>
 

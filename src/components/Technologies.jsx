@@ -46,6 +46,7 @@ const Technologies = () => {
     isOpen2: false,
     isOpen3: false,
   });
+
   // Languages
   const languages = [
     {
@@ -418,6 +419,7 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap items-center justify-center gap-4 lg:hidden"
       >
+        
         {icons.map((icon, index) => (
           <motion.div
             key={index}
