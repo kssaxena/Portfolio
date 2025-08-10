@@ -120,34 +120,40 @@ const Contact = () => {
       >
         <Link
           to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
-          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+          target="_blank"
+          className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
         >
           <FiInstagram className="text-2xl text-red-500" />
         </Link>
         <Link
           to={`https://www.facebook.com/profile.php?id=100006677474839&mibextid=ZbWKwL`}
-          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+          target="_blank"
+          className="rounded-2xl p-2 hover:-translate-x-2 duration-300 ease-in-out"
         >
           <FaFacebookF className="text-2xl text-cyan-500" />
         </Link>
         <Link
           to={`https://github.com/kssaxena`}
-          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+          target="_blank"
+          className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
         >
           <FaGithub className="text-2xl text-white" />
         </Link>
         <Link
           to={`https://www.linkedin.com/in/kshitij-saxena-16baa5261/`}
-          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+          target="_blank"
+          className="rounded-2xl p-2 hover:translate-x-2 duration-300 ease-in-out"
         >
           <FaLinkedinIn className="text-2xl text-blue-500" />
         </Link>
-        <Link
-          to={`kshitijsaxena9@gmail.com`}
-          className="rounded-2xl border-4 border-neutral-800 p-2 hover:-translate-y-2 duration-300 ease-in-out"
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=kshitijsaxena9@gmail.com&su=Hello%20from%20your%20portfolio!&body=Hi%20there,%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20reach%20out.%0A%0ABest%20regards,%0A[Your%20Name]"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
         >
           <BiLogoGmail className="text-2xl text-red-500" />
-        </Link>
+        </a>
       </motion.div>
     </div>
   );
