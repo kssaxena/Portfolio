@@ -1,4 +1,3 @@
-// import Mr_saxena_logo from "../assets/Mr_saxena_logo.png";
 import { ABOUT_TEXT } from "../AllConstants/AllConstants";
 import { motion } from "framer-motion";
 import { Timeline } from "./ui/timeline";
@@ -7,41 +6,24 @@ import { IoSchool } from "react-icons/io5";
 import { FaPaintbrush } from "react-icons/fa6";
 import { TiCamera } from "react-icons/ti";
 import { FaCode } from "react-icons/fa";
-import RandomImageSlider from "./ui/random-image-slider";
-import { galleryBannerImages, projectUrls } from "../AllConstants/AllConstants";
-import { AiFillInstagram } from "react-icons/ai";
-import { PieChart } from "@mui/x-charts/PieChart";
-import { FaGithub } from "react-icons/fa";
 import {
   SiJavascript,
   SiTypescript,
-  SiReact,
-  SiReactrouter,
-  SiRedux,
-  SiNextdotjs,
-  SiNodedotjs,
   SiExpress,
-  SiTailwindcss,
   SiMongodb,
-  SiMysql,
-  SiPostgresql,
-  SiAmazonaws,
-  SiGooglecloud,
   SiGit,
   SiHtml5,
+  SiC,
 } from "react-icons/si";
-import { IconCloud } from "./ui/icon-cloud";
 import {
   SiPostman,
   SiFigma,
   SiAdobephotoshop,
   SiCss3,
   SiFramer,
-  SiLinux,
   SiAdobelightroom,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
 import { LiaPython } from "react-icons/lia";
 import { AnimatePresence } from "framer-motion";
 import { FloatingDock } from "./ui/floating-dock";
@@ -51,43 +33,6 @@ import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs, TbBrandRedux, TbBrandTailwind } from "react-icons/tb";
 
 const About = () => {
-  const slugs = [
-    "typescript",
-    "javascript",
-    "dart",
-    "java",
-    "react",
-    "flutter",
-    "android",
-    "html5",
-    "css3",
-    "nodedotjs",
-    "express",
-    "nextdotjs",
-    "prisma",
-    "amazonaws",
-    "postgresql",
-    "firebase",
-    "nginx",
-    "vercel",
-    "testinglibrary",
-    "jest",
-    "cypress",
-    "docker",
-    "git",
-    "jira",
-    "github",
-    "gitlab",
-    "visualstudiocode",
-    "androidstudio",
-    "sonarqube",
-    "figma",
-  ];
-
-  const GlobeImage = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
-
   const [handlePopup, setHandlePopup] = useState({
     isOpen1: false,
     isOpen2: false,
@@ -114,13 +59,13 @@ const About = () => {
     },
     { title: "CSS3", icon: <SiCss3 className="h-full w-full text-blue-500" /> },
     {
-      title: "SQL (MySQL)",
-      icon: <SiMysql className="h-full w-full text-blue-600" />,
+      title: "C",
+      icon: <SiC className="h-full w-full text-blue-600" />,
     },
-    {
-      title: "PostgreSQL",
-      icon: <BiLogoPostgresql className="h-full w-full text-cyan-500" />,
-    },
+    // {
+    //   title: "PostgreSQL",
+    //   icon: <BiLogoPostgresql className="h-full w-full text-cyan-500" />,
+    // },
   ];
 
   // Frameworks / Libraries
@@ -158,14 +103,14 @@ const About = () => {
       title: "MongoDB",
       icon: <SiMongodb className="h-full w-full text-green-500" />,
     },
-    {
-      title: "AWS",
-      icon: <SiAmazonaws className="h-full w-full text-yellow-500" />,
-    },
-    {
-      title: "Google Cloud",
-      icon: <SiGooglecloud className="h-full w-full text-red-500" />,
-    },
+    // {
+    //   title: "AWS",
+    //   icon: <SiAmazonaws className="h-full w-full text-yellow-500" />,
+    // },
+    // {
+    //   title: "Google Cloud",
+    //   icon: <SiGooglecloud className="h-full w-full text-red-500" />,
+    // },
     {
       title: "Postman",
       icon: <SiPostman className="h-full w-full text-orange-500" />,
@@ -182,124 +127,6 @@ const About = () => {
     {
       title: "Lightroom",
       icon: <SiAdobelightroom className="h-full w-full text-blue-500" />,
-    },
-  ];
-
-  const Image = [
-    {
-      id: "0",
-      url: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1721488798/Portfolio/photo_jv2aiq.jpg",
-    },
-  ];
-  const chartVariants = {
-    hidden: {
-      scale: 0,
-      rotate: -90,
-      opacity: 0,
-      transformOrigin: "center center",
-    },
-    visible: {
-      scale: 1,
-      rotate: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
-        type: "spring",
-      },
-    },
-  };
-
-  const pieData = [
-    {
-      id: "JavaScript",
-      value: 15,
-      color: "#F7DF1E",
-      label: <SiJavascript />,
-    },
-    {
-      id: "TypeScript",
-      value: 10,
-      color: "#3178C6",
-      label: <SiTypescript />,
-    },
-    {
-      id: "React",
-      value: 12,
-      color: "#61DBFB",
-      label: <SiReact />,
-    },
-    {
-      id: "Redux",
-      value: 6,
-      color: "#764ABC",
-      label: <SiRedux />,
-    },
-    {
-      id: "Next.js",
-      value: 7,
-      color: "#AAAAAA",
-      label: <SiNextdotjs />,
-    },
-    {
-      id: "Node.js",
-      value: 10,
-      color: "#3C873A",
-      label: <SiNodedotjs />,
-    },
-    {
-      id: "Express",
-      value: 5,
-      color: "#888888",
-      label: <SiExpress />,
-    },
-    {
-      id: "Tailwind CSS",
-      value: 5,
-      color: "#38BDF8",
-      label: <SiTailwindcss />,
-    },
-    {
-      id: "MongoDB",
-      value: 5,
-      color: "#47A248",
-      label: <SiMongodb />,
-    },
-    {
-      id: "MySQL",
-      value: 4.1, // strictly > 4
-      color: "#00758F",
-      label: <SiMysql />,
-    },
-    {
-      id: "PostgreSQL",
-      value: 4.5,
-      color: "#336791",
-      label: <SiPostgresql />,
-    },
-    {
-      id: "AWS",
-      value: 6,
-      color: "#FF9900",
-      label: <SiAmazonaws />,
-    },
-    {
-      id: "Google Cloud",
-      value: 4.2,
-      color: "#4285F4",
-      label: <SiGooglecloud />,
-    },
-    {
-      id: "Git",
-      value: 5,
-      color: "#F05032",
-      label: <SiGit />,
-    },
-    {
-      id: "HTML/CSS (W3C)",
-      value: 5,
-      color: "#E34C26",
-      label: <SiHtml5 />,
     },
   ];
 
@@ -415,7 +242,7 @@ const About = () => {
     },
     //skills
     {
-      title: "Skills",
+      title: "TechStack",
       icon: <FaCode />,
       icon2: <TiCamera />,
       icon3: <FaPaintbrush />,
@@ -617,37 +444,6 @@ const About = () => {
         </div>
       ),
     },
-    // changelog
-    // {
-    //   title: "Changelog",
-    //   content: (
-    //     <div>
-    //       <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-    //         Deployed 5 new components on Aceternity today
-    //       </p>
-    //       <div className="mb-8">
-    //         <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-    //           ✅ Card grid component
-    //         </div>
-    //         <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-    //           ✅ Startup template Aceternity
-    //         </div>
-    //         <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-    //           ✅ Random file upload lol
-    //         </div>
-    //         <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-    //           ✅ Himesh Reshammiya Music CD
-    //         </div>
-    //         <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-    //           ✅ Salman Bhai Fan Club registrations open
-    //         </div>
-    //       </div>
-    //       <div className=" h-full text-white">
-    //         {/* <Radar data={dataRadar} className="  w-1/2" /> */}
-    //       </div>
-    //     </div>
-    //   ),
-    // },
   ];
 
   return (

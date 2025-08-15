@@ -1,220 +1,68 @@
 import { useState } from "react";
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandNextjs, TbBrandRedux, TbBrandTailwind } from "react-icons/tb";
-import {
-  SiMongodb,
-  SiExpress,
-  SiPostman,
-  SiMysql,
-  SiTypescript,
-  SiFigma,
-  SiAdobephotoshop,
-  SiHtml5,
-  SiCss3,
-  SiAmazonaws,
-  SiGooglecloud,
-  SiGit,
-  SiFramer,
-  SiLinux,
-  SiJavascript,
-  SiAdobelightroom,
-} from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { LiaPython } from "react-icons/lia";
-import { AnimatePresence, motion } from "framer-motion";
-import { FloatingDock } from "./ui/floating-dock";
-import { Plus, X } from "lucide-react";
-
-const motionVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
+import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import RandomImageSlider from "./ui/random-image-slider";
+import { galleryBannerImages, projectUrls } from "../AllConstants/AllConstants";
+import { AiFillInstagram } from "react-icons/ai";
+import { IconCloud } from "./ui/icon-cloud";
 
 const Technologies = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
-  const [handlePopup, setHandlePopup] = useState({
-    isOpen1: false,
-    isOpen2: false,
-    isOpen3: false,
-  });
-
-  // Languages
-  const languages = [
-    {
-      title: "TypeScript",
-      icon: <SiTypescript className="h-full w-full text-blue-500" />,
-    },
-    {
-      title: "JavaScript",
-      icon: <SiJavascript className="h-full w-full text-yellow-500" />,
-    },
-    {
-      title: "Python",
-      icon: <LiaPython className="h-full w-full text-blue-400" />,
-    },
-    {
-      title: "HTML5",
-      icon: <SiHtml5 className="h-full w-full text-orange-500" />,
-    },
-    { title: "CSS3", icon: <SiCss3 className="h-full w-full text-blue-500" /> },
-    {
-      title: "SQL (MySQL)",
-      icon: <SiMysql className="h-full w-full text-blue-600" />,
-    },
-    {
-      title: "PostgreSQL",
-      icon: <BiLogoPostgresql className="h-full w-full text-cyan-500" />,
-    },
+  const slugs = [
+    "typescript",
+    "javascript",
+    "dart",
+    "java",
+    "react",
+    "flutter",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    "prisma",
+    "amazonaws",
+    "postgresql",
+    "firebase",
+    "nginx",
+    "vercel",
+    "testinglibrary",
+    "jest",
+    "cypress",
+    "docker",
+    "git",
+    "jira",
+    "github",
+    "gitlab",
+    "visualstudiocode",
+    "androidstudio",
+    "sonarqube",
+    "figma",
   ];
 
-  // Frameworks / Libraries
-  const frameworks = [
-    {
-      title: "React",
-      icon: <RiReactjsLine className="h-full w-full text-cyan-500" />,
-    },
-    { title: "Next.js", icon: <TbBrandNextjs className="h-full w-full" /> },
-    {
-      title: "Redux",
-      icon: <TbBrandRedux className="h-full w-full text-purple-500" />,
-    },
-    {
-      title: "Express",
-      icon: <SiExpress className="h-full w-full text-gray-500" />,
-    },
-    {
-      title: "Node.js",
-      icon: <FaNodeJs className="h-full w-full text-green-500" />,
-    },
-    {
-      title: "Tailwind CSS",
-      icon: <TbBrandTailwind className="h-full w-full text-sky-400" />,
-    },
-    {
-      title: "Framer",
-      icon: <SiFramer className="h-full w-full text-purple-400" />,
-    },
-  ];
+  const GlobeImage = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  );
 
-  // Technologies / Tools
-  const tools = [
-    {
-      title: "MongoDB",
-      icon: <SiMongodb className="h-full w-full text-green-500" />,
+  const chartVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -90,
+      opacity: 0,
+      transformOrigin: "center center",
     },
-    {
-      title: "AWS",
-      icon: <SiAmazonaws className="h-full w-full text-yellow-500" />,
+    visible: {
+      scale: 1,
+      rotate: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+        type: "spring",
+      },
     },
-    {
-      title: "Google Cloud",
-      icon: <SiGooglecloud className="h-full w-full text-red-500" />,
-    },
-    {
-      title: "Postman",
-      icon: <SiPostman className="h-full w-full text-orange-500" />,
-    },
-    {
-      title: "Figma",
-      icon: <SiFigma className="h-full w-full text-pink-500" />,
-    },
-    {
-      title: "Photoshop",
-      icon: <SiAdobephotoshop className="h-full w-full text-blue-400" />,
-    },
-    { title: "Git", icon: <SiGit className="h-full w-full text-red-500" /> },
-    {
-      title: "Lightroom",
-      icon: <SiAdobelightroom className="h-full w-full text-blue-500" />,
-    },
-  ];
-
-  const icons = [
-    {
-      component: <RiReactjsLine className="text-2xl text-cyan-500" />,
-      name: "React",
-    },
-    {
-      component: <SiTypescript className="text-2xl text-blue-500" />,
-      name: "TypeScript",
-    },
-    {
-      component: <TbBrandRedux className="text-2xl text-purple-500" />,
-      name: "Redux",
-    },
-    {
-      component: <SiMongodb className="text-2xl text-green-500" />,
-      name: "MongoDB",
-    },
-    {
-      component: <SiExpress className="text-2xl text-gray-500" />,
-      name: "Express",
-    },
-    {
-      component: <FaNodeJs className="text-2xl text-green-500" />,
-      name: "Node.js",
-    },
-    {
-      component: <LiaPython className="text-2xl text-blue-400" />,
-      name: "Python",
-    },
-    { component: <TbBrandNextjs className="text-2xl" />, name: "Next.js" },
-    {
-      component: <SiPostman className="text-2xl text-orange-500" />,
-      name: "Postman",
-    },
-    {
-      component: <BiLogoPostgresql className="text-2xl text-cyan-500" />,
-      name: "PostgreSQL",
-    },
-    {
-      component: <SiMysql className="text-2xl text-blue-600" />,
-      name: "MySQL",
-    },
-    {
-      component: <TbBrandTailwind className="text-2xl text-sky-400" />,
-      name: "Tailwind CSS",
-    },
-    {
-      component: <SiAmazonaws className="text-2xl text-yellow-500" />,
-      name: "AWS",
-    },
-    {
-      component: <SiGooglecloud className="text-2xl text-red-500" />,
-      name: "Google Cloud",
-    },
-    {
-      component: <SiFigma className="text-2xl text-pink-500" />,
-      name: "Figma",
-    },
-    {
-      component: <SiFramer className="text-2xl text-purple-400" />,
-      name: "Framer",
-    },
-    {
-      component: <SiAdobephotoshop className="text-2xl text-blue-400" />,
-      name: "Photoshop",
-    },
-    {
-      component: <SiHtml5 className="text-2xl text-orange-500" />,
-      name: "HTML5",
-    },
-    { component: <SiCss3 className="text-2xl text-blue-500" />, name: "CSS3" },
-    { component: <SiGit className="text-2xl text-red-500" />, name: "Git" },
-    {
-      component: <SiLinux className="text-2xl text-yellow-500" />,
-      name: "Linux",
-    },
-  ];
+  };
 
   return (
     <div className="border-b border-neutral-800 pb-24">
@@ -228,237 +76,107 @@ const Technologies = () => {
           TechStack
         </h1>
       </motion.h1>
-      <div className="hidden lg:flex flex-col justify-center">
-        <div className="gap-5 p-5 flex flex-col items-center justify-center">
-          <div className="flex justify-evenly items-center w-full font-bold lg:text-4xl text-2xl">
-            <h1 className="font-palisade tracking-wide">Languages</h1>
-            <FloatingDock items={languages} />
-            <button
-              onClick={() =>
-                setHandlePopup((prev) => ({
-                  ...prev,
-                  isOpen1: !prev.isOpen1,
-                }))
-              }
-              className="p-2 rounded-full bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300"
-            >
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{ rotate: handlePopup.isOpen1 ? 45 : 0 }} // 45° makes a cross
-                transition={{ duration: 0.3 }}
-              >
-                <Plus className="transition-all duration-300" />
-              </motion.div>
-            </button>
-          </div>
+      <motion.p
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 0.5 }}
+        className="lg:block hidden mb-8 font-normal text-neutral-800 dark:text-neutral-400 text-justify indent-8 text-sm lg:text-base"
+      >
+        I blend my passion for{" "}
+        <span className="font-bold lg:text-lg">Painting</span> and{" "}
+        <span className="font-bold lg:text-lg">Photography</span> with strong
+        skills in{" "}
+        <span className="font-bold lg:text-lg">Full Stack Web Development</span>
+        . My GitHub showcases projects built with the MERN stack, including user
+        authentication systems, REST APIs, and real-time web apps. This mix of
+        creativity and code allows me to build visually engaging and technically
+        sound digital solutions.
+      </motion.p>
 
-          {/* Animated expandable container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-6 gap-4">
+        {/* Large Image - Left */}
+        <div className="md:row-span-4">
           <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: handlePopup.isOpen1 ? "auto" : 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="overflow-hidden w-full flex justify-center"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.2 }}
+            className="flex justify-center items-center relative w-full md:h-full h-72 overflow-hidden rounded-xl"
           >
-            <AnimatePresence>
-              {handlePopup.isOpen1 && (
-                <motion.p
-                  key="popup-text"
-                  className="tracking-wide"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.3, delay: 0.2 }}
-                >
-                  JavaScript, TypeScript, Python, HTML5, and CSS3 form the core
-                  of my programming toolkit, enabling me to craft robust,
-                  scalable, and visually engaging applications. JavaScript
-                  powers the dynamic logic of my projects, while TypeScript
-                  enhances type safety and maintainability. Python adds
-                  versatility for backend logic, automation, and data-driven
-                  tasks. HTML5 and CSS3 work in tandem to structure and style
-                  user interfaces, ensuring that my applications are both
-                  functional and aesthetically pleasing across devices.
-                </motion.p>
-              )}
-            </AnimatePresence>
+            <div className="shadow-2xl shadow-black/50 w-full h-full">
+              <RandomImageSlider
+                images={galleryBannerImages}
+                direction="leftToRight"
+              />
+            </div>
+            <a
+              href="https://www.instagram.com/mr_saxena007/"
+              target="_blank"
+              className="absolute w-full h-full top-0 left-0 py-auto hover:scale-150 duration-700 ease-in-out hover:bg-black/60 tracking-widest hover:tracking-[0.5rem]"
+            >
+              <motion.h1
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                transition={{ duration: 0.2, delay: 0.5 }}
+                className="text- h-full drop-shadow-2xl w-full flex justify-center items-center bg-black/40 text-[#DEDFD8] font-Cinzel uppercase"
+              >
+                Persona
+                <span>
+                  <AiFillInstagram className="h-4 w-4 text-red-500" />
+                </span>
+              </motion.h1>
+            </a>
           </motion.div>
         </div>
 
-        <div className="gap-5 p-5 flex flex-col items-center justify-center ">
-          <div className="flex justify-evenly items-center w-full  font-bold lg:text-4xl text-2xl">
-            <h1 className="font-palisade tracking-wide">
-              Frameworks & Libraries
-            </h1>
-            <FloatingDock
-              mobileClassName="" // only for demo, remove for production
-              items={frameworks}
-            />
-            <button
-              onClick={() =>
-                setHandlePopup((prev) => ({
-                  ...prev,
-                  isOpen2: !prev.isOpen2,
-                }))
-              }
-              className="p-2 rounded-full bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300"
-            >
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{ rotate: handlePopup.isOpen2 ? 45 : 0 }} // 45° makes a cross
-                transition={{ duration: 0.3 }}
-              >
-                <Plus className="transition-all duration-300" />
-              </motion.div>
-            </button>
-          </div>
-          {/* Animated expandable container */}
+        {/* Pie Chart - Right Bottom */}
+        <div className="row-span-4 col-start-2 row-start-3 hidden lg:flex">
           <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: handlePopup.isOpen2 ? "auto" : 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="overflow-hidden w-full flex justify-center"
+            variants={chartVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.6 }}
+            className="flex justify-center items-center h-full w-full "
           >
-            <AnimatePresence>
-              {handlePopup.isOpen2 && (
-                <motion.p
-                  key="popup-text"
-                  className="tracking-wide"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.3, delay: 0.2 }}
-                >
-                  I specialize in modern frameworks like React, Next.js, Redux,
-                  Tailwind CSS, and Framer, which streamline the process of
-                  building responsive, high-performance applications. React
-                  serves as my go-to for creating modular, reusable components,
-                  while Next.js enhances SEO and server-side rendering. Redux
-                  offers state management for complex projects, and Tailwind CSS
-                  speeds up styling with utility-first classes. Framer brings
-                  interactive animations and polished micro-interactions to
-                  elevate user experience.
-                </motion.p>
-              )}
-            </AnimatePresence>
+            <IconCloud images={GlobeImage} />
           </motion.div>
         </div>
 
-        <div className="gap-5 p-5 flex flex-col items-center justify-center ">
-          <div className="flex justify-evenly items-center w-full  font-bold lg:text-4xl text-2xl">
-            <h1 className="font-palisade tracking-wide">
-              Databases , Tools & Platforms
-            </h1>
-            <FloatingDock
-              mobileClassName="" // only for demo, remove for production
-              items={tools}
-            />
-            <button
-              onClick={() =>
-                setHandlePopup((prev) => ({
-                  ...prev,
-                  isOpen3: !prev.isOpen3,
-                }))
-              }
-              className="p-2 rounded-full bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300"
-            >
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{ rotate: handlePopup.isOpen3 ? 45 : 0 }} // 45° makes a cross
-                transition={{ duration: 0.3 }}
-              >
-                <Plus className="transition-all duration-300" />
-              </motion.div>
-            </button>
-          </div>
-          {/* Animated expandable container */}
+        {/* GitHub Image - Right Top */}
+        <div className="md:row-span-2 md:col-start-2 md:row-start-1">
           <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: handlePopup.isOpen3 ? "auto" : 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="overflow-hidden w-full flex justify-center"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center items-center relative w-full md:h-full h-72 overflow-hidden rounded-xl"
           >
-            <AnimatePresence>
-              {handlePopup.isOpen3 && (
-                <motion.p
-                  key="popup-text"
-                  className="tracking-wide flex justify-center items-center flex-col gap-5"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.3, delay: 0.2 }}
-                >
-                  My database expertise spans MongoDB, PostgreSQL, and MySQL,
-                  giving me the flexibility to choose the right solution for any
-                  project. MongoDB’s document-oriented structure is ideal for
-                  fast, scalable applications, PostgreSQL offers robust
-                  relational features for data-heavy systems, and MySQL provides
-                  a dependable foundation for traditional web apps. This range
-                  ensures I can handle both structured and unstructured data
-                  efficiently.
-                  <span>
-                    I leverage a diverse set of tools and platforms to
-                    streamline development workflows and enhance deployment
-                    capabilities. AWS and Google Cloud provide reliable
-                    infrastructure for hosting and scaling applications. Postman
-                    accelerates API testing and debugging, while Git ensures
-                    version control and collaborative development. Design tools
-                    like Figma and Photoshop support UI/UX creation, and Linux
-                    offers a stable development environment for server
-                    management and automation.
-                  </span>
-                </motion.p>
-              )}
-            </AnimatePresence>
+            <div className="shadow-2xl shadow-black/50 w-full h-full">
+              <RandomImageSlider images={projectUrls} />
+            </div>
+            <a
+              href="https://pin.it/1gXqcEuwM"
+              target="_blank"
+              className="absolute w-full h-full top-0 left-0 py-auto hover:scale-150 duration-700 ease-in-out hover:bg-black/60 tracking-widest hover:tracking-[0.5rem]"
+            >
+              <motion.h1
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                transition={{ duration: 0.2, delay: 0.6 }}
+                className="text- h-full drop-shadow-2xl w-full flex justify-center items-center bg-black/40 text-[#DEDFD8] font-Cinzel uppercase"
+              >
+                github
+                <span>
+                  <FaGithub className="h-4 w-4 text-blue-900" />
+                </span>
+              </motion.h1>
+            </a>
           </motion.div>
+        </div>
+
+        {/* Empty Space / Future Content */}
+        <div className="md:row-span-2 md:row-start-5 lg:block hidden">
+          <div className="w-20 h-40"></div>
         </div>
       </div>
-
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4 lg:hidden"
-      >
-        
-        {icons.map((icon, index) => (
-          <motion.div
-            key={index}
-            variants={motionVariants(3 + index * 0.5)}
-            initial="initial"
-            animate="animate"
-            className="relative flex items-center justify-center rounded-full border-4 border-neutral-800 p-4 hover:scale-125 duration-300 ease-in-out"
-            onMouseEnter={() => setHoveredIcon(icon.name)}
-            onMouseLeave={() => setHoveredIcon(null)}
-          >
-            {icon.component}
-            {hoveredIcon === icon.name && (
-              <>
-                <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-red-500"
-                  animate={{ rotate: [0, 360] }}
-                  transition={{
-                    duration: 2,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                  }}
-                />
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-red-500 opacity-20 blur-xl"
-                  animate={{ scale: [1, 1.5], opacity: [0.2, 0.4, 0.2] }}
-                  transition={{
-                    duration: 1.5,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                  }}
-                />
-                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-800 px-5 py-2 text-lg rounded-2xl text-white shadow-lg duration-300 ease-in-out">
-                  {icon.name}
-                </div>
-              </>
-            )}
-          </motion.div>
-        ))}
-      </motion.div>
     </div>
   );
 };
