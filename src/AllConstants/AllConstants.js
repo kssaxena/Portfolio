@@ -27,3 +27,21 @@ export const projectUrls = [
   "https://ik.imagekit.io/jarvisai/My_Portfolio/HealthTap.png?updatedAt=1753893552687",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/EmpowerED.png?updatedAt=1753893548129",
 ];
+
+export const pinterestUrls = [
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%201.jpeg?updatedAt=1755274074201",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%202.jpeg?updatedAt=1755274074244",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.21.59%20PM.jpeg?updatedAt=1755274074342",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG20230211174805.jpg?updatedAt=1755274075827",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/SAVE_20240424_204829.jpg?updatedAt=1755274079374",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/SAVE_20240424_204836.jpg?updatedAt=1755274080058",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.22.00%20PM%201.jpeg?updatedAt=1755274080760",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM%202.jpeg?updatedAt=1755274080881",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.22.00%20PM.jpeg?updatedAt=1755274081162",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM.jpeg?updatedAt=1755274081453",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG_7125.JPG?updatedAt=1755274082105",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM.jpeg?updatedAt=1755274086372",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM%201.jpeg?updatedAt=1755274086488",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/DSC_0382.jpg?updatedAt=1755274087405",
+];

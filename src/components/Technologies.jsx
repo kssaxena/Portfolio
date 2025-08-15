@@ -1,44 +1,52 @@
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaPinterest } from "react-icons/fa";
 import { motion } from "framer-motion";
 import RandomImageSlider from "./ui/random-image-slider";
-import { galleryBannerImages, projectUrls } from "../AllConstants/AllConstants";
+import {
+  galleryBannerImages,
+  pinterestUrls,
+} from "../AllConstants/AllConstants";
 import { AiFillInstagram } from "react-icons/ai";
 import { IconCloud } from "./ui/icon-cloud";
 
 const Technologies = () => {
-  const [hoveredIcon, setHoveredIcon] = useState(null);
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+  const shuffledPinterestImages = shuffleArray(pinterestUrls);
+  const shuffledInstagramImages = shuffleArray(galleryBannerImages);
+
   const slugs = [
     "typescript",
     "javascript",
-    "dart",
     "java",
     "react",
-    "flutter",
     "android",
     "html5",
     "css3",
     "nodedotjs",
     "express",
-    "nextdotjs",
-    "prisma",
     "amazonaws",
     "postgresql",
     "firebase",
-    "nginx",
     "vercel",
-    "testinglibrary",
-    "jest",
-    "cypress",
     "docker",
     "git",
-    "jira",
     "github",
     "gitlab",
     "visualstudiocode",
     "androidstudio",
-    "sonarqube",
     "figma",
+    "stackBlitz",
+    "postman",
+    "adobephotoshop",
+    "adobelightroom",
+    "framer",
   ];
 
   const GlobeImage = slugs.map(
@@ -73,7 +81,7 @@ const Technologies = () => {
         className="my-20 text-center"
       >
         <h1 className="bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-4xl text-transparent w-fit font-agile uppercase tracking-widest">
-          TechStack
+          hobby & interests
         </h1>
       </motion.h1>
       <motion.p
@@ -93,18 +101,18 @@ const Technologies = () => {
         sound digital solutions.
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-6 gap-4">
-        {/* Large Image - Left */}
-        <div className="md:row-span-4">
+      <div className="flex justify-center items-center lg:flex-row flex-col">
+        {/* instagram */}
+        <div className="flex justify-center items-center lg:w-96 lg:h-96 h-48 w-full">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.2 }}
-            className="flex justify-center items-center relative w-full md:h-full h-72 overflow-hidden rounded-xl"
+            className="flex justify-center items-center relative h-full w-full overflow-hidden rounded-xl"
           >
             <div className="shadow-2xl shadow-black/50 w-full h-full">
               <RandomImageSlider
-                images={galleryBannerImages}
+                images={shuffledInstagramImages}
                 direction="leftToRight"
               />
             </div>
@@ -121,36 +129,36 @@ const Technologies = () => {
               >
                 Persona
                 <span>
-                  <AiFillInstagram className="h-4 w-4 text-red-500" />
+                  <AiFillInstagram className="h-4 w-4 text-[#EA0096]" />
                 </span>
               </motion.h1>
             </a>
           </motion.div>
         </div>
 
-        {/* Pie Chart - Right Bottom */}
-        <div className="row-span-4 col-start-2 row-start-3 hidden lg:flex">
+        {/* globe */}
+        <div className="">
           <motion.div
             variants={chartVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.6 }}
-            className="flex justify-center items-center h-full w-full "
+            className="flex justify-center items-center "
           >
             <IconCloud images={GlobeImage} />
           </motion.div>
         </div>
 
-        {/* GitHub Image - Right Top */}
-        <div className="md:row-span-2 md:col-start-2 md:row-start-1">
+        {/* Pinterest */}
+        <div className="flex justify-center items-center lg:w-96 lg:h-96 h-48 w-full">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center items-center relative w-full md:h-full h-72 overflow-hidden rounded-xl"
+            className="flex justify-center items-center relative h-full w-full overflow-hidden rounded-xl"
           >
             <div className="shadow-2xl shadow-black/50 w-full h-full">
-              <RandomImageSlider images={projectUrls} />
+              <RandomImageSlider images={shuffledPinterestImages} />
             </div>
             <a
               href="https://pin.it/1gXqcEuwM"
@@ -163,18 +171,13 @@ const Technologies = () => {
                 transition={{ duration: 0.2, delay: 0.6 }}
                 className="text- h-full drop-shadow-2xl w-full flex justify-center items-center bg-black/40 text-[#DEDFD8] font-Cinzel uppercase"
               >
-                github
+                pinterest
                 <span>
-                  <FaGithub className="h-4 w-4 text-blue-900" />
+                  <FaPinterest className="h-4 w-4 text-[#E60022]" />
                 </span>
               </motion.h1>
             </a>
           </motion.div>
-        </div>
-
-        {/* Empty Space / Future Content */}
-        <div className="md:row-span-2 md:row-start-5 lg:block hidden">
-          <div className="w-20 h-40"></div>
         </div>
       </div>
     </div>

@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="border-b border-neutral-900 pb-20 flex flex-col items-center justify-center gap-10">
+    <div className="border-b border-neutral-900 pb-20 flex flex-col items-center justify-center lg:gap-10">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
@@ -116,7 +116,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-wrap items-center justify-center gap-7"
+        className="flex flex-wrap items-center justify-center lg:gap-7 gap-2"
       >
         <Link
           to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}

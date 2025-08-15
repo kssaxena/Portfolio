@@ -36,6 +36,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Brandon";
+  src: url("/fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .font-agile {
   font-family: "Agile", sans-serif;
 }
@@ -50,6 +57,9 @@
 }
 .font-montserrat {
   font-family: "Montserrat", cursive;
+}
+.font-brandon {
+  font-family: "Brandon", cursive;
 }
 
 :root {
