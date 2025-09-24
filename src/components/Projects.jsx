@@ -8,24 +8,24 @@ const Projects = () => {
   const PROJECTS = [
     //finora
     {
-      title: "Finora Billing",
+      title: "Swift Quote",
       description:
         "This project is a comprehensive, production-ready billing solution designed to streamline day-to-day business operations for small to mid-sized enterprises. It offers a robust set of features including user authentication, role-based access control, product and stock management, inventory tracking, and invoice generation.",
       content: (
         <div className="flex justify-center items-center relative w-full h-full">
           <div className=" shadow-2xl shadow-black/50 bg-red-400 w-full h-full ">
             <img
-              src={`https://ik.imagekit.io/jarvisai/My_Portfolio/FinoraBilling.png?updatedAt=1753900509804`}
+              src={`https://ik.imagekit.io/jarvisai/My_Portfolio/swiftQuote.png?updatedAt=1758730149119`}
               className="object-cover w-full h-full"
             />
           </div>
           <a
-            href="https://github.com/kssaxena/Finora"
+            href="https://swiftquote.arisertradco.com/"
             target="_blank"
             className="absolute w-full h-full top-0 left-0 py-auto hover:scale-150 duration-300 ease-in-out hover:bg-black/60 "
           >
             <h1 className="text- h-full drop-shadow-2xl w-full flex justify-center items-center bg-black/40 text-[#DEDFD8]  font-Cinzel tracking-widest">
-              Finora Billing{" "}
+              Swift Quote
               <span>
                 <FaGithub className="h-4 w-4  text-blue-500" />
               </span>

@@ -95,10 +95,8 @@ const Technologies = () => {
         <span className="font-bold lg:text-lg">Photography</span> with strong
         skills in{" "}
         <span className="font-bold lg:text-lg">Full Stack Web Development</span>
-        . My GitHub showcases projects built with the MERN stack, including user
-        authentication systems, REST APIs, and real-time web apps. This mix of
-        creativity and code allows me to build visually engaging and technically
-        sound digital solutions.
+        . <br /> This mix of creativity and code allows me to build visually engaging
+        and technically sound digital solutions.
       </motion.p>
 
       <div className="flex justify-center items-center lg:flex-row flex-col">

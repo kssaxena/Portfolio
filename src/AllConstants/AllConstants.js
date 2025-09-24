@@ -14,7 +14,7 @@ export const galleryBannerImages = [
 ];
 
 export const projectUrls = [
-  "https://ik.imagekit.io/jarvisai/My_Portfolio/FinoraBilling.png?updatedAt=1753900509804",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/swiftQuote.png?updatedAt=1758730149119",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/BindniJewel.png?updatedAt=1753900264396",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/ARMeasurePro.png?updatedAt=1753901663797",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/Ecom.png?updatedAt=1753900510220",
@@ -29,6 +29,10 @@ export const projectUrls = [
 ];
 
 export const pinterestUrls = [
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG_1493.jpg?updatedAt=1758731084593",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-09-22%20at%2012.05.48%20AM.jpeg?updatedAt=1758731144705",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-09-22%20at%2012.10.19%20AM.jpeg?updatedAt=1758731144668",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-25%20at%209.38.13%20PM.jpeg?updatedAt=1758731145045",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%201.jpeg?updatedAt=1755274074201",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%202.jpeg?updatedAt=1755274074244",
   "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.21.59%20PM.jpeg?updatedAt=1755274074342",
