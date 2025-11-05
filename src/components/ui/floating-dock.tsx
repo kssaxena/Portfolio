@@ -1,9 +1,3 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
-
 import { cn } from "../lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
@@ -81,7 +75,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        " w-fit  h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 flex dark:bg-neutral-900",
+        " w-fit  h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 flex dark:bg-black/10",
         className
       )}
     >
@@ -90,7 +84,7 @@ const FloatingDockDesktop = ({ items, className }) => {
           key={item.title}
           initial={{ opacity: 0, y: 50 }} // Start hidden & lower
           whileInView={{ opacity: 1, y: 0 }} // Animate in when visible
-        //   viewport={{ once: true, amount: 0.2 }} // Trigger once, when 20% visible
+          //   viewport={{ once: true, amount: 0.2 }} // Trigger once, when 20% visible
           transition={{ duration: 0.5, delay: index * 0.1 }} // Small stagger
         >
           <IconContainer mouseX={mouseX} {...item} />
