@@ -63,7 +63,7 @@ const Clients = () => {
 
     return (
       <div className="flex justify-between items-center">
-        <div className="text-xl flex flex-col justify-around items-start w-1/3 gap-60">
+        <div className="text-xl lg:flex flex-col justify-around items-start w-1/3 gap-60 hidden">
           <h1 className="flex justify-center items-start ">
             <span>
               Here's what people have to say about working together. Real
@@ -82,7 +82,7 @@ const Clients = () => {
             </button>
           </div>
         </div>
-        <div className="overflow-hidden md:w-1/2 w-[90%]">
+        <div className="overflow-hidden lg:w-1/2 w-[90%]">
           <div>
             <div
               className="flex transition-transform duration-700 ease-in-out rounded-xl"
@@ -94,19 +94,19 @@ const Clients = () => {
                   className="flex-shrink-0 w-full h-full flex justify-center items-center"
                 >
                   <Card
+                    key={slide.id}
                     name={slide.name}
-                    description={slide.description}
                     title={slide.title}
+                    description={slide.description}
                     projectName={slide.projectName}
                     projectLink={slide.projectLink}
-                    key={slide.id}
                     projectLogo={slide.projectLogo}
                   />
                 </div>
               ))}
             </div>
             {/* Dots  */}
-            <div className="lg:flex justify-center gap-2 my-5 lg:mt-20 hidden ">
+            <div className="flex justify-center gap-2 my-5 lg:mt-20 ">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -116,6 +116,14 @@ const Clients = () => {
                   onClick={() => setCurrent(index)}
                 />
               ))}
+            </div>
+            <div className="lg:hidden flex justify-center items-center gap-10">
+              <button onClick={prevSlide} className="text-3xl">
+                <FaChevronLeft />
+              </button>
+              <button onClick={nextSlide} className="text-3xl">
+                <FaChevronRight />
+              </button>
             </div>
           </div>
         </div>
