@@ -21,17 +21,17 @@ const Clients = () => {
     onReadMore,
   }) => {
     return (
-      <div className="h-96 rounded-lg flex flex-col m-5 justify-evenly items-start px-5 select-none">
-        <h1 className="stars uppercase w-full flex justify-start items-start text-2xl tracking-widest">
+      <div className="h-96 w-full rounded-lg flex flex-col m-5 justify-evenly items-start select-none">
+        <h1 className="stars uppercase w-full flex justify-start items-start tracking-widest text-center md:text-left">
           {title}
         </h1>
-        <div className="review">
+        <div className="review w-full">
           <h1 className="text-justify">"{description}"</h1>
         </div>
-        <div className="flex justify-center items-center gap-10">
+        <div className="flex justify-center items-center gap-10 w-full">
           <img
             src={projectLogo}
-            className=" w-20 h-20 rounded-full object-contain"
+            className=" w-16 h-1w-16 rounded-full object-contain"
             alt={name}
           />
           <h1>
@@ -62,7 +62,7 @@ const Clients = () => {
     const totalSlides = testimonials.length;
 
     return (
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center ">
         <div className="text-xl lg:flex flex-col justify-around items-start w-1/3 gap-60 hidden">
           <h1 className="flex justify-center items-start ">
             <span>
@@ -75,14 +75,14 @@ const Clients = () => {
           </h1>
           <div className="flex justify-center items-center gap-10">
             <button onClick={prevSlide} className="text-3xl">
-              <FaChevronLeft />
+              <FaChevronLeft className="text-red-500"/>
             </button>
             <button onClick={nextSlide} className="text-3xl">
-              <FaChevronRight />
+              <FaChevronRight className="text-red-500"/>
             </button>
           </div>
         </div>
-        <div className="overflow-hidden lg:w-1/2 w-[90%]">
+        <div className="overflow-hidden lg:w-1/2">
           <div>
             <div
               className="flex transition-transform duration-700 ease-in-out rounded-xl"
@@ -111,18 +111,18 @@ const Clients = () => {
                 <button
                   key={index}
                   className={`h-3 w-3 rounded-full ${
-                    index === current ? "bg-[#DEDFD8]" : "bg-[#2A2623] border"
+                    index === current ? "bg-red-500" : "bg-[#2A2623] border"
                   }`}
                   onClick={() => setCurrent(index)}
                 />
               ))}
             </div>
-            <div className="lg:hidden flex justify-center items-center gap-10">
-              <button onClick={prevSlide} className="text-3xl">
-                <FaChevronLeft />
+            <div className="lg:hidden flex justify-center items-center gap-10 ">
+              <button onClick={prevSlide} className="text-xl">
+                <FaChevronLeft className="text-red-500"/>
               </button>
-              <button onClick={nextSlide} className="text-3xl">
-                <FaChevronRight />
+              <button onClick={nextSlide} className="text-xl">
+                <FaChevronRight className="text-red-500"/>
               </button>
             </div>
           </div>
