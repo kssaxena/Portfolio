@@ -38,7 +38,8 @@
 
 @font-face {
   font-family: "Brandon";
-  src: url("/fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf") format("opentype");
+  src: url("/fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -99,4 +100,27 @@
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Disable browser's native smooth behavior — we'll control it */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Recommended Lenis base styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none; /* smoother while scrolling over iframes */
 }
