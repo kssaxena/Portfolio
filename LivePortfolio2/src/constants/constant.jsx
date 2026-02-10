@@ -200,7 +200,7 @@ export const testimonials = [
     projectLogo:
       "https://ik.imagekit.io/cxgu0ftldb/all-user/ARISER-TRADCO/logo_/1757689065953-logo_b.jpg?updatedAt=1757689068634",
     projectLink: "https://arisertradco.com",
-    post:"Director"
+    post: "Director",
   },
   {
     id: 2,
@@ -244,5 +244,102 @@ export const testimonials = [
     projectLogo:
       "https://ik.imagekit.io/woodzcraft/IMG_20250411_105210-removebg-preview.png?updatedAt=1744349111877",
     projectLink: "https://woodzzzcraft.com",
+  },
+];
+
+export const galleryBannerImages = [
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.38.02%E2%80%AFPM.png?updatedAt=1753963921378",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.38.57%E2%80%AFPM.png?updatedAt=1753963921343",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.39.53%E2%80%AFPM.png?updatedAt=1753963920887",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.39.36%E2%80%AFPM.png?updatedAt=1753963920513",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.40.09%E2%80%AFPM.png?updatedAt=1753963920369",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.39.07%E2%80%AFPM.png?updatedAt=1753963919884",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.38.28%E2%80%AFPM.png?updatedAt=1753963919473",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/My_Photographs/Screenshot%202025-07-31%20at%205.38.41%E2%80%AFPM.png?updatedAt=1753963919294",
+];
+
+export const pinterestUrls = [
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/6098096512664538178.jpg?updatedAt=1762929779405",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG_1493.jpg?updatedAt=1758731084593",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-09-22%20at%2012.05.48%20AM.jpeg?updatedAt=1758731144705",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-09-22%20at%2012.10.19%20AM.jpeg?updatedAt=1758731144668",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-25%20at%209.38.13%20PM.jpeg?updatedAt=1758731145045",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%201.jpeg?updatedAt=1755274074201",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM%202.jpeg?updatedAt=1755274074244",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.21.59%20PM.jpeg?updatedAt=1755274074342",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG20230211174805.jpg?updatedAt=1755274075827",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/SAVE_20240424_204829.jpg?updatedAt=1755274079374",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/SAVE_20240424_204836.jpg?updatedAt=1755274080058",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/20240222074553_IMG_6418.jpg?updatedAt=1755274080575",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.22.00%20PM%201.jpeg?updatedAt=1755274080760",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM%202.jpeg?updatedAt=1755274080881",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.22.00%20PM.jpeg?updatedAt=1755274081162",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.29.43%20PM.jpeg?updatedAt=1755274081453",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/IMG_7125.JPG?updatedAt=1755274082105",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM.jpeg?updatedAt=1755274086372",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/WhatsApp%20Image%202025-08-15%20at%204.24.21%20PM%201.jpeg?updatedAt=1755274086488",
+  "https://ik.imagekit.io/jarvisai/My_Portfolio/Pinterest_Images/DSC_0382.jpg?updatedAt=1755274087405",
+];
+
+export const factsData = [
+  {
+    number: "01",
+    title: "Experience",
+    description:
+      "Hands-on experience building real-world products across frontend, backend, and infrastructure.",
+    points: [
+      "2+ years of practical development experience",
+      "Worked across startups and personal projects",
+      "End-to-end ownership of features",
+      "Production debugging & optimization",
+    ],
+  },
+  {
+    number: "02",
+    title: "Projects",
+    description:
+      "A diverse set of projects ranging from experiments to full-scale applications.",
+    points: [
+      "25+ completed projects",
+      "Full-stack web applications",
+      "Admin dashboards & tools",
+      "APIs, integrations, and automation",
+    ],
+  },
+  {
+    number: "03",
+    title: "GitHub Activity",
+    description:
+      "Consistent contribution history showcasing daily learning and experimentation.",
+    points: [
+      "500+ GitHub contributions",
+      "Active commits across multiple repositories",
+      "Frontend, backend, and tooling work",
+      "Regular experimentation and refactoring",
+    ],
+  },
+  {
+    number: "04",
+    title: "Technology Stack",
+    description:
+      "A carefully chosen stack focused on performance, scalability, and developer experience.",
+    points: [
+      "React, Next.js, Tailwind CSS",
+      "Node.js, Express, REST APIs",
+      "MongoDB, PostgreSQL, MySQL",
+      "Docker, CI/CD, VPS hosting",
+    ],
+  },
+  {
+    number: "05",
+    title: "Deployments & Ops",
+    description:
+      "Reliable production deployments with attention to uptime and security.",
+    points: [
+      "15+ production deployments",
+      "VPS & Linux server management",
+      "CI/CD pipelines",
+      "Monitoring & maintenance",
+    ],
   },
 ];
