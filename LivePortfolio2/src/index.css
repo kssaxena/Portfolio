@@ -1,1 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@font-face {
+  font-family: "InterBold";
+  src: url("../public/fonts/InterDisplay-SemiBold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "InterRegular";
+  src: url("../public/fonts/InterDisplay-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font declaration  */
+.font-dmMono {
+  font-family: "DM Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-montserrat {
+  font-family: "Montserrat";
+}
+.font-interBold {
+  font-family: "InterBold", sans-serif;
+}
+.font-interRegular {
+  font-family: "InterRegular", sans-serif;
+}
+
+/* "DM Mono", monospace */
+
+/* Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: smooth;
+}
+
+/* Optional: improve mouse wheel feel */
+body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  padding: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1d2739;
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d2739;
+}
+
+/* Disable browser's native smooth behavior — we'll control it */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Recommended Lenis base styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none; /* smoother while scrolling over iframes */
+}
+
+.marquee {
+  animation: marquee 60s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* .knockout {
+  background-image: url("./assets/portfolioImage.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+} */
