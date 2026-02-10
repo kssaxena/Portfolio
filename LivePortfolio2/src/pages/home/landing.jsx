@@ -1,25 +1,26 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { FiInstagram } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { ContainerTextFlip } from "../../components/ui/containerFlip";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Footer = () => {
+const Landing = () => {
   const marqueeRef = useRef(null);
-  const footerRef = useRef(null);
+  const heroRef = useRef(null);
 
   useEffect(() => {
     const marquee = marqueeRef.current;
-    const footer = footerRef.current;
-    if (!marquee || !footer) return;
+    const hero = heroRef.current;
+    if (!marquee || !hero) return;
 
     // Pause initially
     marquee.style.animationPlayState = "paused";
 
     let lastScroll = 0;
 
-    // Observe footer visibility
+    // Observe hero visibility
     const observer = new IntersectionObserver(
       ([entry]) => {
         marquee.style.animationPlayState = entry.isIntersecting
@@ -29,7 +30,7 @@ const Footer = () => {
       { threshold: 0.35 },
     );
 
-    observer.observe(footer);
+    observer.observe(hero);
 
     // Lenis scroll listener
     const lenis = window.lenis;
@@ -56,36 +57,39 @@ const Footer = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className="group">
-      <div className="overflow- ">
-        <img
+    <div
+      ref={heroRef}
+      className="group z-40 h-screen relative overflow-hidden "
+    >
+      <div className="overflow-hidden ">
+        <motion.img
           src={
             "https://ik.imagekit.io/jarvisai/My_Portfolio/portfolioImage.png"
           }
-          className="w-full h-full duration-700 ease-in-out group-hover:scale-150"
+          className="w-full h-full duration-700 ease-in-out group-hover:scale-105"
         />
       </div>
 
       {/* <h1 className="absolute w-full h-full text-[280px] top-0 left-0 text-center text-nowrap text-black font-interBold flex justify-center items-center">
-        Reach Out -
-      </h1> */}
+          Reach Out -
+        </h1> */}
       <h1 className="absolute w-full h-full top-0 left-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 flex items-center">
           <div
             ref={marqueeRef}
             className="marquee flex text-[280px] font-interBold whitespace-nowrap bg-black/80 bg-clip-text text-transparent"
           >
-            <span className="knockout mr-20">Reach Out -</span>
-            <span className="knockout mr-20">Reach Out -</span>
-            <span className="knockout mr-20">Reach Out -</span>
-            <span className="knockout mr-20">Reach Out -</span>
+            <span className="knockout mr-20">Kshitij Saxena -</span>
+            <span className="knockout mr-20">Kshitij Saxena -</span>
+            <span className="knockout mr-20">Kshitij Saxena -</span>
+            <span className="knockout mr-20">Kshitij Saxena -</span>
           </div>
         </div>
       </h1>
 
-      <div className="absolute w-full bottom-0 left-0 py-auto flex justify-start items-end p-5 ">
+      <div className="absolute w-full bottom-0 left-0 py-auto flex justify-between items-end p-5 ">
         <section
-          className={`flex justify-center items-center gap-2 text-neutral-900 `}
+          className={`grid grid-cols-2 justify-center items-center text-neutral-900 `}
         >
           <Link
             to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
@@ -124,9 +128,18 @@ const Footer = () => {
             <BiLogoGmail className="text-2xl" />
           </a>
         </section>
+        <div className="text-[72px] leading-16 text-black/80 font-montserrat font-bold tracking-tighter flex flex-col justify-end items-end">
+          <h1>
+            <ContainerTextFlip
+              words={["I.O.T", "Frontend", "Backend", "Full Stack"]}
+            />
+            Developer
+          </h1>
+          <h1>// Web Designer</h1>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Footer;
+export default Landing;

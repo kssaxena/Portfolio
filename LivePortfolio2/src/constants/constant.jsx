@@ -124,3 +124,125 @@ export const gitProjects = [
     link: "https://github.com/kssaxena",
   },
 ];
+
+export const services = [
+  {
+    number: "01",
+    title: "Frontend Development",
+    description: "Modern, responsive, and performance-focused user interfaces.",
+    points: [
+      "React & component-driven architecture",
+      "Tailwind CSS & scalable design systems",
+      "Framer Motion & micro-interactions",
+      "Responsive layouts for all devices",
+      "Performance & accessibility optimization",
+    ],
+  },
+  {
+    number: "02",
+    title: "Backend Development",
+    description: "Robust server-side systems built for scale and security.",
+    points: [
+      "Node.js & Express APIs",
+      "REST & GraphQL architecture",
+      "Authentication & authorization",
+      "Database design & optimization",
+      "Third-party service integrations",
+    ],
+  },
+  {
+    number: "03",
+    title: "DevOps",
+    description:
+      "Reliable deployment pipelines and production-ready infrastructure.",
+    points: [
+      "CI/CD automation",
+      "Docker & containerization",
+      "Environment & secrets management",
+      "Monitoring & logging",
+      "Performance & uptime optimization",
+    ],
+  },
+  {
+    number: "04",
+    title: "UI UX Designing",
+    description: "Clear, usable, and visually refined product experiences.",
+    points: [
+      "User flows & wireframing",
+      "Typography & visual hierarchy",
+      "Interaction & motion design",
+      "Design systems & consistency",
+      "Developer-ready design handoff",
+    ],
+  },
+  {
+    number: "05",
+    title: "VPS Hostings",
+    description: "Secure, scalable, and fully managed server environments.",
+    points: [
+      "Linux server setup & hardening",
+      "Domain & SSL configuration",
+      "Application deployment",
+      "Automated backups",
+      "Ongoing monitoring & maintenance",
+    ],
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    title: "Reliable & Professional Execution",
+    description:
+      "The project was handled with a high level of professionalism and clarity from start to finish. Requirements were well understood, timelines were respected, and the final delivery was stable, scalable, and aligned perfectly with business needs.",
+    projectName: "Ariser Tradco",
+    name: "Nitya Siddhi",
+    projectLogo:
+      "https://ik.imagekit.io/cxgu0ftldb/all-user/ARISER-TRADCO/logo_/1757689065953-logo_b.jpg?updatedAt=1757689068634",
+    projectLink: "https://arisertradco.com",
+    post:"Director"
+  },
+  {
+    id: 2,
+    title: "Creative Vision Brought to Life",
+    description:
+      "The platform beautifully captured our creative identity while maintaining excellent usability and performance. Ideas were translated into a visually engaging product with thoughtful design decisions and smooth user flow.",
+    projectName: "Creative Art School",
+    name: "Souvik Goswami",
+    projectLink: "https://creativesartschool.in",
+    projectLogo:
+      "https://ik.imagekit.io/woodzcraft/Screenshot_2025-04-11_at_11.04.32_AM-removebg-preview.png?updatedAt=1744349745716",
+  },
+  {
+    id: 3,
+    title: "Strong Communication & Attention to Detail",
+    description:
+      "The development process felt collaborative and well-structured throughout. Every detail was thoughtfully implemented, resulting in a refined and emotionally engaging platform that truly reflects its concept.",
+    projectName: "Stories of Aura",
+    name: "Ishan Sharma",
+    projectLogo:
+      "https://ik.imagekit.io/krb6qpkbp/Logo/Aura%20LOGO%20white.png?updatedAt=1762107262073",
+  },
+  {
+    id: 4,
+    title: "Smart Problem Solving & Efficiency",
+    description:
+      "Complex logic and dynamic features were handled with impressive efficiency. Proactive suggestions and technical improvements significantly enhanced the overall user experience and system performance.",
+    projectName: "SwiftQuote",
+    name: "Aryan",
+    projectLogo:
+      "https://ik.imagekit.io/cxgu0ftldb/Swift-Quote/Shif-large.png?updatedAt=1752417734712",
+    projectLink: "https://swiftquote.arisertradco.com",
+  },
+  {
+    id: 5,
+    title: "Dedicated & Brand-Focused Development",
+    description:
+      "The project was executed with a strong focus on brand consistency and performance. Challenges were addressed quickly, and the final product delivered both reliability and a polished user experience.",
+    projectName: "Woodzzz Craft",
+    name: "Souvik Goswami",
+    projectLogo:
+      "https://ik.imagekit.io/woodzcraft/IMG_20250411_105210-removebg-preview.png?updatedAt=1744349111877",
+    projectLink: "https://woodzzzcraft.com",
+  },
+];
