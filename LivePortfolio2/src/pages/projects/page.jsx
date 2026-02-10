@@ -79,7 +79,7 @@ const Projects = () => {
 
   return (
     <div>
-      <section className="bg-[#121111] min-h-screen text-neutral-200 z-50 shadow-2xl">
+      <section className="bg-[#121111] min-h-screen text-neutral-200 z-50 shadow-2xl shadow-black">
         {/* Title */}
         <div className="text-[120px] font-interBold py-56 h-[55vh]">
           Work Index
