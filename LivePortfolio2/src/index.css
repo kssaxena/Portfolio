@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: "InterBold";
-  src: url("../public/fonts/InterDisplay-SemiBold.ttf") format("opentype");
+  src: url("/fonts/InterDisplay-SemiBold.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "InterRegular";
-  src: url("../public/fonts/InterDisplay-Regular.ttf") format("opentype");
+  src: url("/fonts/InterDisplay-Regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

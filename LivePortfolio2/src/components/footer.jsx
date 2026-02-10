@@ -4,6 +4,7 @@ import { FiInstagram } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import ScrollToTopButton from "./ui/scrollToTopButton";
 
 const Footer = () => {
   const marqueeRef = useRef(null);
@@ -56,7 +57,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className="group">
+    <div ref={footerRef} className="group. z-50">
+      {/* <ScrollToTopButton /> */}
       <div className="overflow- ">
         <img
           src={
@@ -65,7 +67,6 @@ const Footer = () => {
           className="w-full h-full duration-700 ease-in-out group-hover:scale-150"
         />
       </div>
-
       {/* <h1 className="absolute w-full h-full text-[280px] top-0 left-0 text-center text-nowrap text-black font-interBold flex justify-center items-center">
         Reach Out -
       </h1> */}
@@ -82,46 +83,43 @@ const Footer = () => {
           </div>
         </div>
       </h1>
-
       <div className="absolute w-full bottom-0 left-0 py-auto flex justify-start items-end p-5 ">
-        <section
-          className={`flex justify-center items-center gap-2 text-neutral-900 `}
-        >
+        <section className={`flex justify-start items-start gap-2 flex-col`}>
           <Link
             to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
             target="_blank"
-            className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
+            className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out flex justify-center items-center gap-5"
           >
-            <FiInstagram className="text-2xl" />
+            <FiInstagram className="text-2xl" /> Instagram
           </Link>
           <Link
             to={`https://www.facebook.com/profile.php?id=100006677474839&mibextid=ZbWKwL`}
             target="_blank"
-            className="rounded-2xl p-2 hover:-translate-x-2 duration-300 ease-in-out"
+            className="rounded-2xl p-2 hover:-translate-x-2 duration-300 ease-in-out flex justify-center items-center gap-5"
           >
-            <FaFacebookF className="text-2xl" />
+            <FaFacebookF className="text-2xl" /> Facebook
           </Link>
           <Link
             to={`https://github.com/kssaxena`}
             target="_blank"
-            className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
+            className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out flex justify-center items-center gap-5"
           >
-            <FaGithub className="text-2xl" />
+            <FaGithub className="text-2xl" /> GitHub
           </Link>
           <Link
             to={`https://www.linkedin.com/in/kshitij-saxena-16baa5261/`}
             target="_blank"
-            className="rounded-2xl p-2 hover:translate-x-2 duration-300 ease-in-out"
+            className="rounded-2xl p-2 hover:translate-x-2 duration-300 ease-in-out flex justify-center items-center gap-5"
           >
-            <FaLinkedinIn className="text-2xl" />
+            <FaLinkedinIn className="text-2xl" /> LinkedIn
           </Link>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=kshitijsaxena9@gmail.com&su=Hello%20from%20your%20portfolio!&body=Hi%20there,%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20reach%20out.%0A%0ABest%20regards,%0A[Your%20Name]"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out"
+            className="rounded-2xl p-2 hover:-translate-y-2 duration-300 ease-in-out flex justify-center items-center gap-5"
           >
-            <BiLogoGmail className="text-2xl" />
+            <BiLogoGmail className="text-2xl" /> Gmail
           </a>
         </section>
       </div>
