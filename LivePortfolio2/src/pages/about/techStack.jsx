@@ -23,7 +23,6 @@ import { FaNodeJs } from "react-icons/fa";
 import { LiaPython } from "react-icons/lia";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs, TbBrandRedux, TbBrandTailwind } from "react-icons/tb";
-import { FaAws, FaPlus } from "react-icons/fa6";
 
 const TechStack = () => {
   const [handlePopup, setHandlePopup] = useState({
@@ -209,7 +208,7 @@ const TechStack = () => {
                 animate={{ rotate: handlePopup.isOpen2 ? 45 : 0 }} // 45° makes a cross
                 transition={{ duration: 0.3 }}
               >
-                <FaPlus className="transition-all duration-300" />
+                <BiPlus className="transition-all duration-300" />
               </motion.div>
             </button>
           </div>
@@ -270,7 +269,7 @@ const TechStack = () => {
                 animate={{ rotate: handlePopup.isOpen3 ? 45 : 0 }} // 45° makes a cross
                 transition={{ duration: 0.3 }}
               >
-                <FaPlus className="transition-all duration-300" />
+                <BiPlus className="transition-all duration-300" />
               </motion.div>
             </button>
           </div>
