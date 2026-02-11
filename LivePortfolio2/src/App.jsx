@@ -44,7 +44,7 @@ function App() {
     <TransitionContext.Provider value={transitionTo}>
       <div className="relative w-full font-interRegular">
         {/* FOOTER — BACKGROUND LAYER */}
-        <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="fixed top-0 left-0 inset-0 z-0 pointer-events-none min-h-screen">
           <Footer />
         </div>
 

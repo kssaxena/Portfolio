@@ -14,6 +14,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "InterMedium";
+  src: url("/fonts/InterDisplay-Medium.ttf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  line-height: 220px;
+  size: 280px;
+  color: #ffffff;
+}
 /* font declaration  */
 .font-dmMono {
   font-family: "DM Mono", monospace;
@@ -28,6 +37,9 @@
 }
 .font-interRegular {
   font-family: "InterRegular", sans-serif;
+}
+.font-interMedium {
+  font-family: "InterMedium", sans-serif;
 }
 
 /* "DM Mono", monospace */
