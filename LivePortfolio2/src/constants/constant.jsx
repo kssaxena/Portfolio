@@ -210,6 +210,7 @@ export const testimonials = [
     projectName: "Creative Art School",
     name: "Souvik Goswami",
     projectLink: "https://creativesartschool.in",
+    post: "Owner",
     projectLogo:
       "https://ik.imagekit.io/woodzcraft/Screenshot_2025-04-11_at_11.04.32_AM-removebg-preview.png?updatedAt=1744349745716",
   },
@@ -220,6 +221,7 @@ export const testimonials = [
       "The development process felt collaborative and well-structured throughout. Every detail was thoughtfully implemented, resulting in a refined and emotionally engaging platform that truly reflects its concept.",
     projectName: "Stories of Aura",
     name: "Ishan Sharma",
+    post: "CEO",
     projectLogo:
       "https://ik.imagekit.io/krb6qpkbp/Logo/Aura%20LOGO%20white.png?updatedAt=1762107262073",
   },
@@ -230,6 +232,7 @@ export const testimonials = [
       "Complex logic and dynamic features were handled with impressive efficiency. Proactive suggestions and technical improvements significantly enhanced the overall user experience and system performance.",
     projectName: "SwiftQuote",
     name: "Aryan",
+    post: "Co-Founder",
     projectLogo:
       "https://ik.imagekit.io/cxgu0ftldb/Swift-Quote/Shif-large.png?updatedAt=1752417734712",
     projectLink: "https://swiftquote.arisertradco.com",
@@ -241,6 +244,7 @@ export const testimonials = [
       "The project was executed with a strong focus on brand consistency and performance. Challenges were addressed quickly, and the final product delivered both reliability and a polished user experience.",
     projectName: "Woodzzz Craft",
     name: "Souvik Goswami",
+    post: "Owner",
     projectLogo:
       "https://ik.imagekit.io/woodzcraft/IMG_20250411_105210-removebg-preview.png?updatedAt=1744349111877",
     projectLink: "https://woodzzzcraft.com",
