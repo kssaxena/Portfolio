@@ -32,21 +32,71 @@ const Projects = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // const ProjectCard = ({ image, date, title, description }) => {
+  //   // Date, title, description, image, link
+  //   return (
+  //     <div className="flex justify-center items-center gap-5 w-[150vh] shrink-0">
+  //       <div className="h-[90vh] w-[60%] rounded-xl border border-gray-800 overflow-hidden">
+  //         <img src={image} className="w-full h-full object-cover" />
+  //       </div>
+  //       <div className="h-[90vh] w-[35%] rounded-xl border border-gray-800 flex flex-col gap-10 p-6">
+  //         <p className="text-[18px] font-dmMono">({date})</p>
+  //         <h1 className="text-[64px] font-interBold tracking-tighter">
+  //           {title}
+  //         </h1>
+  //         <p className="text-[18px]">{description}</p>
+  //       </div>
+  //       {/* <a href="">{link}</a> */}
+  //     </div>
+  //   );
+  // };
   const ProjectCard = ({ image, date, title, description }) => {
-    // Date, title, description, image, link
     return (
-      <div className="flex justify-center items-center gap-5 w-[150vh] shrink-0">
-        <div className="h-[90vh] w-[60%] rounded-xl border border-gray-800 overflow-hidden">
-          <img src={image} className="w-full h-full object-cover" />
+      <div
+        className="
+      flex flex-col lg:flex-row
+      justify-center items-center
+      gap-6
+      w-screen lg:w-[150vh] h-[90vh]
+      shrink-0
+    "
+      >
+        {/* IMAGE */}
+        <div
+          className="
+        w-full lg:w-[60%]
+        h-[50vh] lg:h-[90vh]
+        rounded-xl border border-gray-800
+        overflow-hidden
+      "
+        >
+          <img src={image} className="w-full h-full object-cover" alt={title} />
         </div>
-        <div className="h-[90vh] w-[35%] rounded-xl border border-gray-800 flex flex-col gap-10 p-6">
-          <p className="text-[18px] font-dmMono">({date})</p>
-          <h1 className="text-[64px] font-interBold tracking-tighter">
+
+        {/* CONTENT */}
+        <div
+          className="
+        w-full lg:w-[35%]
+        h-auto lg:h-[90vh]
+        rounded-xl border border-gray-800
+        flex flex-col
+        gap-6 lg:gap-10
+        p-6
+      "
+        >
+          <p className="text-[16px] lg:text-[18px] font-dmMono">({date})</p>
+
+          <h1
+            className="
+          text-[32px] sm:text-[42px] lg:text-[64px]
+          font-interBold tracking-tighter
+        "
+          >
             {title}
           </h1>
-          <p className="text-[18px]">{description}</p>
+
+          <p className="text-[16px] lg:text-[18px]">{description}</p>
         </div>
-        {/* <a href="">{link}</a> */}
       </div>
     );
   };
@@ -56,7 +106,7 @@ const Projects = () => {
       <Link
         to={link}
         target="blank"
-        className="grid grid-cols-3 justify-center items-center border-b border-neutral-800 text-[18px] p-2 hover:bg-[#F05038] duration-500 ease-in-out text-neutral-400 group px-8"
+        className="grid grid-col-2 md:grid-cols-3 justify-center items-center border-b border-neutral-800 text-[18px] p-2 hover:bg-[#F05038] duration-500 ease-in-out text-neutral-400 group px-8 gap-5 "
       >
         <h1 className="flex gap-10 font-interBold text-white">
           {title}{" "}
@@ -68,7 +118,7 @@ const Projects = () => {
           {/* {truncateString(description, 30)} */}
           {description}
         </h1>
-        <div className="flex justify-end">
+        <div className="md:flex justify-end hidden">
           <div className="h-14 w-14 rounded-xl border border-gray-800 overflow-hidden">
             <img src={image} className="w-full h-full object-cover" />
           </div>{" "}
@@ -81,7 +131,7 @@ const Projects = () => {
     <div>
       <section className="bg-[#121111] min-h-screen text-neutral-200 z-50 shadow-2xl shadow-black">
         {/* Title */}
-        <div className="text-[120px] font-interBold py-56 h-[55vh]">
+        <div className="text-[64px] md:text-[120px] font-interBold md:py-56 pt-56 px-5">
           Work Index
         </div>
 
