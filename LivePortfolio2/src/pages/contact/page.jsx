@@ -9,20 +9,21 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="bg-[#121111] text-neutral-200 z-40 shadow-2xl shadow-black min-h-screen py-48 flex flex-col w-full justify-end items-end">
-      <h1 className="text-[120px] font-interBold leading-none w-full">
-        <span className="text-[#F05038]">Reach</span> <br /> Out
+    <div className="bg-[#121111] text-neutral-200 z-40 shadow-2xl shadow-black min-h-screen py-40 flex flex-col w-full justify-end items-end gap-10">
+      <h1 className="text-[64px] md:text-[120px] font-interBold leading-none w-full md:sticky md:top-0 md:left-0">
+        <span className="text-[#F05038]">Reach</span>{" "}
+        <br className="hidden md:block" /> Out
       </h1>
-      <div className="flex justify-end items-end w-[60%] flex-col">
-        <h1 className="w-full text-[40px] font-interBold leading-none">
+      <div className="flex md:justify-end md:items-end md:w-[60%] w-full flex-col">
+        <h1 className="w-full text-[24px] md:text-[40px] font-interBold leading-none px-5">
           Tell me about your idea. <br /> I’ll take it from there.
         </h1>
-        <form className="w-full pr-5">
+        <form className="w-full md:pr-5 px-5 ">
           <InputBox Placeholder="Your name" />
           <InputBox Placeholder="Job title" />
           <InputBox Placeholder="Email" />
           <InputBox Placeholder="Comments" />
-          <Button Label="Send message" className="m-10" />
+          <Button Label="Send message" className="md:m-10 my-10" />
         </form>
         <div className="w-full py-auto flex justify-start items-end p-5 ">
           <section className={`flex justify-start items-start gap-2 flex-col`}>
