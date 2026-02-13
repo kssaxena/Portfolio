@@ -17,8 +17,8 @@ const About = () => {
   return (
     <div>
       <div className="h-fit bg-[#121111] shadow-2xl shadow-black">
-        <div className="px-8 pt-[50vh]  text-neutral-400 flex flex-col justify-end items-center z-40 relative">
-          <h1 className="text-[52px] leading-[1.1] tracking-tighter font-interBold h-full flex justify-end items-end w-full text-end text-neutral-300">
+        <div className="px-8 pt-[50vh] pb-20 text-neutral-400 flex flex-col justify-end items-center z-40 relative gap-20">
+          <h1 className="text-[28px] md:text-[52px] leading-[1.1] tracking-tighter font-interBold h-full flex md:justify-end md:items-end w-full md:text-end  text-neutral-300 indent-8">
             I am a passionate full stack developer with a knack for crafting
             robust and scalable web applications. with in past years of hands on
             experience, I have honed my skills in front-end technologies like
@@ -27,8 +27,8 @@ const About = () => {
             to create innovative solutions that drive business growth and
             deliver exceptional user experiences.
           </h1>
-          <div className="flex p-20 justify-start items-start gap-40">
-            <h1 className="w-[42rem] indent-14">
+          <div className="flex flex-col md:flex-row md:p-20 justify-start items-start md:gap-40 gap-10 w-full">
+            <h1 className="md:w-[42rem] indent-14 w-full">
               I am a dedicated and versatile full stack developer with a passion
               for creating efficient and user-friendly web applications. With
               past year experience, I have worked with a variety of
@@ -53,7 +53,7 @@ const About = () => {
           />
           <div className="bg-black/5 w-full h-full absolute flex justify-end items-center">
             <ScrollRevealText
-              className="text-[52px] leading-[1.1] w-[60%] font-interBold"
+              className="text-[38px] md:text-[52px] leading-[1.1] w-[60%] font-interBold"
               textParts={[
                 { text: "Distinctive design for brands", color: "white" },
                 { text: "with taste -- built to stand", color: "red" },
@@ -76,7 +76,7 @@ const About = () => {
           </h1>
           <div className="w-full flex justify-end">
             <ScrollRevealText
-              className="text-[52px] leading-[1.1] w-[70%] font-interBold"
+              className="text-[28px] md:text-[52px] leading-[1.1] md:w-[70%] font-interBold"
               textParts={[
                 { text: "Photography and coding are", color: "white" },
                 { text: "more than hobbies", color: "red" },
@@ -102,7 +102,7 @@ const About = () => {
 
           <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
             <ScrollRevealText
-              className="text-[52px] leading-[1.1] w-[60%] font-interBold"
+              className="text-[40px] md:text-[52px] leading-[1.1] md:w-[60%] w-full font-interBold"
               textParts={[
                 { text: "Engineering solutions", color: "white" },
                 { text: "that scale", color: "red" },
@@ -119,7 +119,7 @@ const About = () => {
             // Contribution Graph
           </h1>
           <ScrollRevealText
-            className="text-[52px] leading-[1.1] w-[60%] font-interBold"
+            className="text-[28px] md:text-[52px] leading-[1.1] md:w-[60%] w-full font-interBold"
             textParts={[
               { text: "Consistent progress,", color: "white" },
               { text: "measured in commits", color: "red" },
@@ -131,7 +131,7 @@ const About = () => {
           <img
             src="https://ghchart.rshah.org/d15da7/kssaxena"
             alt="GitHub Contributions"
-            className="w-3/4 invert"
+            className="md:w-3/4 w-full invert"
           />
         </div>
       </div>

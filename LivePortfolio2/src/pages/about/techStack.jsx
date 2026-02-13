@@ -157,7 +157,7 @@ const TechStack = () => {
           initial={{ height: 0 }}
           animate={{ height: handlePopup.isOpen1 ? "auto" : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="overflow-hidden w-1/2 flex justify-center text-center"
+          className="overflow-hidden md:w-1/2 w-full flex justify-center text-center text-[14px]"
         >
           <AnimatePresence>
             {handlePopup.isOpen1 && (
@@ -218,13 +218,13 @@ const TechStack = () => {
           initial={{ height: 0 }}
           animate={{ height: handlePopup.isOpen2 ? "auto" : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="overflow-hidden w-1/2 flex justify-center text-center"
+          className="overflow-hidden md:w-1/2 w-full flex justify-center text-center text-[14px]"
         >
           <AnimatePresence>
             {handlePopup.isOpen2 && (
               <motion.p
                 key="popup-text"
-                className="tracking-wide"
+                className="tracking-wide "
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
@@ -279,7 +279,7 @@ const TechStack = () => {
           initial={{ height: 0 }}
           animate={{ height: handlePopup.isOpen3 ? "auto" : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="overflow-hidden w-1/2 flex justify-center text-center"
+          className="overflow-hidden md:w-1/2 w-full flex justify-center text-center text-[14px]"
         >
           <AnimatePresence>
             {handlePopup.isOpen3 && (
