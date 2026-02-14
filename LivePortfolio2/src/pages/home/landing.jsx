@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF, FaGithub } from "react-icons/fa6";
 import { FiInstagram } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
 import { ContainerTextFlip } from "../../components/ui/containerFlip";
