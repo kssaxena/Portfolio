@@ -29,10 +29,14 @@ const FactsItem = ({ data, index, setActive }) => {
   return (
     <div
       ref={ref}
-      className="py-20 border-b border-neutral-700 flex flex-col gap-6"
+      className="md:py-20 py-5 border-b border-neutral-700 flex flex-col gap-6 text-[18px]"
     >
-      <h3 className="text-[72px] font-interBold">{data.title}</h3>
-      <p className="text-neutral-400 max-w-2xl">{data.description}</p>
+      <h3 className="md:text-[72px] text-[32px] font-interBold">
+        {data.title}
+      </h3>
+      <p className="text-neutral-400 text-[14px] max-w-2xl">
+        {data.description}
+      </p>
 
       <div className="mt-4 text-neutral-300 flex flex-col gap-5">
         {data.points.map((point, i) => (
@@ -50,11 +54,11 @@ const Facts = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex flex-col justify-end items-start gap-36 border-t border-gray-800 pt-10 px-5 text-neutral-200 text-[18px] min-h-screen relative">
+    <div className="flex flex-col justify-end items-start md:gap-36 border-t border-gray-800 pt-10 px-5 text-neutral-200 text-[18px] min-h-screen relative">
       <h1 className="text-[#F05038] sticky top-0 left-0">// Facts</h1>
-      <section className="text-neutral-100 px-10 pt-32 w-full">
+      <section className="text-neutral-100 md:px-10 pt-32 w-full">
         <div className="flex gap-32 ">
-          <div className="sticky top-1/4 -translate-y-1/2 h-fit">
+          <div className="sticky top-1/4 -translate-y-1/2 h-fit hidden md:flex">
             <motion.span
               key={activeIndex}
               initial={{ opacity: 0, y: 20 }}
@@ -79,7 +83,6 @@ const Facts = () => {
           </div>
         </div>
       </section>
-      
     </div>
   );
 };

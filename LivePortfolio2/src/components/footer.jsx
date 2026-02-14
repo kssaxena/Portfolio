@@ -5,10 +5,20 @@ import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollToTopButton from "./ui/scrollToTopButton";
+import useReactiveMarquee from "./hooks/useReactiveMarquee";
+import { useParallax } from "./hooks/ParallaxImage";
 
 const Footer = () => {
-  const marqueeRef = useRef(null);
+  // const marqueeRef = useRef(null);
   const footerRef = useRef(null);
+  const imageRef = useRef(null);
+  const { minusY, scale } = useParallax(imageRef);
+
+  const marqueeRef = useReactiveMarquee({
+    speed: 0.4,
+    scrollMultiplier: 1.8,
+    smoothness: 0.08,
+  });
 
   useEffect(() => {
     const marquee = marqueeRef.current;
@@ -57,16 +67,32 @@ const Footer = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className="group. z-50">
+    <div
+      ref={footerRef}
+      className="group z-50 h-screen relative overflow-hidden"
+    >
       {/* <ScrollToTopButton /> */}
-      <div className="overflow- ">
+      <div ref={imageRef} className="relative overflow-hidden h-[100vh]">
+        <motion.img
+          src={
+            "https://ik.imagekit.io/jarvisai/My_Portfolio/ChatGPT%20Image%20Feb%2011,%202026,%2005_55_46%20PM.png"
+          }
+          // src={
+          //   "https://ik.imagekit.io/jarvisai/My_Portfolio/portfolioImage.png"
+          // }
+          style={{ minusY, scale }}
+          className="w-full h-full object-cover will-change-transform absolute"
+          // className="w-full h-full duration-700 ease-in-out object-cover"
+        />
+      </div>
+      {/* <div className="overflow-hidden h-full ">
         <img
           src={
             "https://ik.imagekit.io/jarvisai/My_Portfolio/portfolioImage.png"
           }
-          className="w-full h-full duration-700 ease-in-out group-hover:scale-150"
+          className="w-full h-full duration-700 ease-in-out group-hover:scale-150 object-cover"
         />
-      </div>
+      </div> */}
       {/* <h1 className="absolute w-full h-full text-[280px] top-0 left-0 text-center text-nowrap text-black font-interBold flex justify-center items-center">
         Reach Out -
       </h1> */}
@@ -74,17 +100,27 @@ const Footer = () => {
         <div className="absolute inset-0 flex items-center">
           <div
             ref={marqueeRef}
-            className="marquee flex text-[280px] font-interBold whitespace-nowrap bg-black/80 bg-clip-text text-transparent"
+            className=" flex md:text-[280px] text-[120px] font-interBold whitespace-nowrap mix-blend-difference font-interMedium text-white tracking-tighter"
           >
-            <span className="knockout mr-20">Reach Out -</span>
-            <span className="knockout mr-20">Reach Out -</span>
-            <span className="knockout mr-20">Reach Out -</span>
-            <span className="knockout mr-20">Reach Out -</span>
+            <div className="flex">
+              <span className="mr-20">Reach Out -</span>
+              <span className="mr-20">Reach Out -</span>
+              <span className="mr-20">Reach Out -</span>
+              <span className="mr-20">Reach Out -</span>
+            </div>
+            <div className="flex">
+              <span className="mr-20">Reach Out -</span>
+              <span className="mr-20">Reach Out -</span>
+              <span className="mr-20">Reach Out -</span>
+              <span className="mr-20">Reach Out -</span>
+            </div>
           </div>
         </div>
       </h1>
-      <div className="absolute w-full bottom-0 left-0 py-auto flex justify-start items-end p-5 ">
-        <section className={`flex justify-start items-start gap-2 flex-col`}>
+      <div className="absolute w-full bottom-0 left-0 py-auto flex justify-start items-end p-5 z-40">
+        <section
+          className={`hidden md:flex justify-start items-start gap-2 flex-col`}
+        >
           <Link
             to={`https://www.instagram.com/mr_saxena007?igsh=a3I5MWVveXBzb2Iw`}
             target="_blank"

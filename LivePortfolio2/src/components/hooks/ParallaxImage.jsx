@@ -7,7 +7,8 @@ export const useParallax = (ref) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
+  const minusY = useTransform(scrollYProgress, [0, 1], ["-20%", "-40%"]);
   const scale = useTransform(scrollYProgress, [0, 1], [1.05, 1]);
 
-  return { y, scale };
+  return { minusY, y, scale };
 };
