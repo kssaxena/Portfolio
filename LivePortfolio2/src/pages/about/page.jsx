@@ -138,6 +138,7 @@ const About = () => {
       <div className="h-screen bg-transparent" />
     </div>
   );
+  
 };
 
 export default About;
