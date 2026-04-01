@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "../../components/ButtonWrapper";
 import TechStack from "./techStack";
 import ScrollRevealText from "../../components/ui/ScrollTextColor";
@@ -13,6 +13,39 @@ const About = () => {
 
   const imageRef2 = useRef(null);
   const { y: y2, scale: scale2 } = useParallax(imageRef2);
+
+  const GitHubCommits = () => {
+    const [commits, setCommits] = useState(0);
+
+    useEffect(() => {
+      const fetchCommits = async () => {
+        const res = await fetch(
+          "https://api.github.com/search/commits?q=author:kssaxena+committer-date:2026-01-01..2026-12-31",
+          {
+            headers: {
+              Accept: "application/vnd.github.cloak-preview",
+            },
+          },
+        );
+        const data = await res.json();
+        setCommits(data.total_count);
+      };
+
+      fetchCommits();
+    }, []);
+
+    return commits ? (
+      <div className="text-center text-white font-dmMono">
+        <h2>
+          So far <span className="text-[#F05038]">{commits}</span> contributions
+          in 2026
+        </h2>
+        {/* <p className="text-4xl font-bold">{commits} Commits</p> */}
+      </div>
+    ) : (
+      ""
+    );
+  };
 
   return (
     <div>
@@ -118,6 +151,7 @@ const About = () => {
           <h1 className="text-[#F05038] sticky top-0 left-0 w-full text-[18px] px-5">
             // Contribution Graph
           </h1>
+          <GitHubCommits />
           <ScrollRevealText
             className="text-[28px] md:text-[52px] leading-[1.1] md:w-[60%] w-full font-interBold"
             textParts={[
@@ -138,7 +172,6 @@ const About = () => {
       <div className="h-screen bg-transparent" />
     </div>
   );
-  
 };
 
 export default About;
